@@ -3,7 +3,7 @@ h1 a {
   display: none;
 }
 
-.container-lg px-3 my-5 markdown-body {
+.container-lg {
   min-width: 200px;
   max-width: 980px;
   padding: 45px;
@@ -176,7 +176,7 @@ How do we delete the root and keep the heap a complete binary tree? The only spo
 
 <h1 id="bsts">Binary Search Trees</h1>
 
-<h1 id="hashing">hashing</h1>
+<h1 id="hashing">Hashing</h1>
 
 <h1 id="sorting">Sorting Algorithms</h1>
 <h2 id="insertion-sort">Insertion Sort</h2>
