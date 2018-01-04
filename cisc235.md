@@ -10,6 +10,7 @@ h1 a {
 }
 </style>
 
+[All Notes](http://karishmadaga.com/course-notes) // [About](http://karishmadaga.com)
 # CISC 235: Data Structures
 This course covers topics ranging from algorithmic complexity, stacks and queues, heaps, sorting algorithms, BSTs and its various types, and more. I'll be updating it throughout the course!
 
@@ -19,15 +20,18 @@ This course covers topics ranging from algorithmic complexity, stacks and queues
 * [Stacks, Queues, and Heaps](#stacks-queues-heaps)
 * [Binary Search Trees](#bsts)
 * [Hashing](#hashing)
+
 * [Sorting Algorithms](#sorting)
   * [Insertion Sort](#insertion-sort)
   * [Merge Sort](#merge-sort)
   * [Quick Sort](#quick-sort)
   * [Heap Sort](#heap-sort)
+
 * [Graphs](#graphs)
   * [Breadth First Search](#bfs)
   * [Depth First Search](#dfs)
   * [Minimum Spanning Trees](#minspantrees)
+
 * [Disjoint Sets](#disjoin-sets)
 * [Shortest Paths](#shortest-paths)
   * [Dijkstra](#dijkstra)
@@ -39,7 +43,7 @@ This course covers topics ranging from algorithmic complexity, stacks and queues
 <h1 id="algorithmic-complexity">Algorithmic Complexity</h1>
 
 
-### Data structures are a smart way of organizing data, based on which we can develop efficient algorithms easily
+### Data structures are a smart way of organizing data, based on which we can develop efficient algorithms easily</h3>
 
 * They're a way of storing and organizing data to facilitate access and modifications
 * We learn the strength and limitations of each data structure so that we know which one to use!
@@ -121,7 +125,7 @@ High level look at asymptotic notations:
 - it is a **simplification**(!!) of the 'real' running time. In the real world, constant factor matters! Hardware matters! Implementation matters!
 - simplification allows the development of the theory of computational complexity (an entire subfield of cs)
 
-### Combining Best/Avg/Worst and Asymptotic: O and Omega can BOTH be used to upper and lower bound worst/best/average running time.
+##### Combining Best/Avg/Worst and Asymptotic**: O and Omega can BOTH be used to upper and lower bound worst/best/average running time.
 
 Example: Commuting time to school from home case:
 * "Even the **worst** day is *less than 2 hours*". So _everyday_ is less than 2 hours. This is the upper bound on the worst case for commuting.
@@ -140,13 +144,13 @@ We can check for every input x of size n, the running time of the algorithm A wi
 
 ## Queues and Heaps
 This week, we're looking at the abstract data type called 'queue' and the heap data structure.
-#### Queue: first in, first serve (FIFO). A queue is a collection of elements with the supported operations **enqueue(Q,x), dequeue(Q), and peekfront(Q)**.
-#### Max-Priority Queue: a collection of elements **with priorities**, i.e., each element x has k priority. (ex: oldest person is served first). It has the supported operations **insert(Q,x), ExtractMax(Q), Max(Q), and IncreasePriority(Q,x,k) which increases x's priority to k**.
+##### Queue: first in, first serve (FIFO). A queue is a collection of elements with the supported operations **enqueue(Q,x), dequeue(Q), and peekfront(Q)**.
+##### Max-Priority Queue: a collection of elements **with priorities**, i.e., each element x has k priority. (ex: oldest person is served first). It has the supported operations **insert(Q,x), ExtractMax(Q), Max(Q), and IncreasePriority(Q,x,k) which increases x's priority to k**.
 
 
 The applications of Priority Queues include job scheduling in operating systems (processes have different priorities), bandwidth management in a router, finding the minimum spanning tree of a graph, etc.
 
-### Implement a Max-Priority Queue
+##### Implement a Max-Priority Queue
 Using an unsorted linked list,
 * **Insert(Q,x)** : x is a node. Insert x at the head, which has the tight bound of 1.
 * **IncreasePriority(Q,x,k)** : Change x's priority to k, which has the tight bound of 1.
@@ -155,8 +159,8 @@ Using an unsorted linked list,
 Using a sorted and unsorted linked list both give us pretty bad tight bounds of n for some operations, and that does not scale well for very large inputs. Is there a better way to link these elements?
 ... Yes! We can use a heap!
 
-#### **Heap**: A heap is a **binary heap** stored in an array, which is a binary tree
-#### **Binary Max-Heap**: A binary max-heap is a *nearly-complete* binary tree that has the *max-heap property*. A binary tree has at most 2 children for each node. A nearly-complete binary tree means that every level is completely filled except for the bottom level, where nodes are filled to as *far left* as possible.
+##### **Heap**: A heap is a **binary heap** stored in an array, which is a binary tree
+###### **Binary Max-Heap**: A binary max-heap is a *nearly-complete* binary tree that has the *max-heap property*. A binary tree has at most 2 children for each node. A nearly-complete binary tree means that every level is completely filled except for the bottom level, where nodes are filled to as *far left* as possible.
 Why is it important for it to be a nearly-complete binary tree?
 1. Because we can then store the tree in an array, and each node knows which index has its parent or left/right child.
 LeftChild(index) = 2*index
@@ -197,6 +201,3 @@ How do we delete the root and keep the heap a complete binary tree? The only spo
 <h2 id="#dijkstra">Dijkstra</h2>
 <h2 id="#bell-ford">Bellman-Ford</h2>
 <h2 id="#extra-paths">Extras</h2>
-</article>
-</body>
-</html>
