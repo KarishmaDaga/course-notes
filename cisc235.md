@@ -1,3 +1,14 @@
+<style>
+h1 a {
+  display: none;
+}
+
+.container-lg px-3 my-5 markdown-body {
+  min-width: 200px;
+  max-width: 980px;
+  padding: 45px;
+}
+</style>
 
 # CISC 235: Data Structures
 This course covers topics ranging from algorithmic complexity, stacks and queues, heaps, sorting algorithms, BSTs and its various types, and more. I'll be updating it throughout the course!
@@ -7,33 +18,27 @@ This course covers topics ranging from algorithmic complexity, stacks and queues
 * [Algorithmic Complexity](#algorithmic-complexity)
 * [Stacks, Queues, and Heaps](#stacks-queues-heaps)
 * [Binary Search Trees](#bsts)
-<li><a href="#hashing">Hashing</a></li>
+* [Hashing](#hashing)
 
-<li><a href="#sorting">Sorting Algorithms</a><ul>
-<li><a href="#insertion-sort">Insertion Sort</a></li>
-<li><a href="#merge-sort">Merge Sort</a></li>
-<li><a href="#quick-sort">Quick Sort</a></li>
-<li><a href="#heap-sort">Heap Sort</a></li>
-</ul></li>
+* [Sorting Algorithms](#sorting)
+  * [Insertion Sort](#insertion-sort)
+  * [Merge Sort](#merge-sort)
+  * [Quick Sort](#quick-sort)
+  * [Heap Sort](#heap-sort)
 
-<li><a href="#graphs">Graphs</a><ul>
-<li><a href="#bfs">Breadth First Search</a></li>
-<li><a href="#dfs">Depth First Search</a></li>
-<li><a href="#minspantrees">Minimum Spanning Trees</a></li>
-</ul></li>
+* [Graphs](#graphs)
+  * [Breadth First Search](#bfs)
+  * [Depth First Search](#dfs)
+  * [Minimum Spanning Trees](#minspantrees)
 
-<li><a href="#disjoint-sets">Disjoint Sets</a></li>
+* [Disjoint Sets](#disjoin-sets)
+* [Shortest Paths](#shortest-paths)
+  * [Dijkstra](#dijkstra)
+  * [Bellman-Ford](#bell-ford)
+  * [Extras](#extra-paths)
 
-<li><a href="#shortest-paths">Shortest Paths</a><ul>
-<li><a href="#dijkstra">Dijkstra</a></li>
-<li><a href="#bell-ford">Bellman-Ford</a></li>
-<li><a href="#extra-paths">Extras</a></li>
-</ul></li>
-
-</ul>
-
-</nav>
 <hr>
+
 <h1 id="algorithmic-complexity">Algorithmic Complexity</h1>
 
 
