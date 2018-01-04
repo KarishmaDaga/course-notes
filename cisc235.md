@@ -19,18 +19,15 @@ This course covers topics ranging from algorithmic complexity, stacks and queues
 * [Stacks, Queues, and Heaps](#stacks-queues-heaps)
 * [Binary Search Trees](#bsts)
 * [Hashing](#hashing)
-
 * [Sorting Algorithms](#sorting)
   * [Insertion Sort](#insertion-sort)
   * [Merge Sort](#merge-sort)
   * [Quick Sort](#quick-sort)
   * [Heap Sort](#heap-sort)
-
 * [Graphs](#graphs)
   * [Breadth First Search](#bfs)
   * [Depth First Search](#dfs)
   * [Minimum Spanning Trees](#minspantrees)
-
 * [Disjoint Sets](#disjoin-sets)
 * [Shortest Paths](#shortest-paths)
   * [Dijkstra](#dijkstra)
