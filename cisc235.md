@@ -124,7 +124,7 @@ High level look at asymptotic notations:
 - it is a **simplification**(!!) of the 'real' running time. In the real world, constant factor matters! Hardware matters! Implementation matters!
 - simplification allows the development of the theory of computational complexity (an entire subfield of cs)
 
-##### Combining Best/Avg/Worst and Asymptotic**: O and Omega can BOTH be used to upper and lower bound worst/best/average running time.
+### Combining Best/Avg/Worst and Asymptotic**: O and Omega can BOTH be used to upper and lower bound worst/best/average running time.
 
 Example: Commuting time to school from home case:
 * "Even the **worst** day is *less than 2 hours*". So _everyday_ is less than 2 hours. This is the upper bound on the worst case for commuting.
