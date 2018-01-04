@@ -42,7 +42,7 @@ This course covers topics ranging from algorithmic complexity, stacks and queues
 <h1 id="algorithmic-complexity">Algorithmic Complexity</h1>
 
 
-### Data structures are a smart way of organizing data, based on which we can develop efficient algorithms easily</h3>
+### Data structures are a smart way of organizing data, based on which we can develop efficient algorithms easily
 
 * They're a way of storing and organizing data to facilitate access and modifications
 * We learn the strength and limitations of each data structure so that we know which one to use!
