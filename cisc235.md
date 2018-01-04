@@ -42,37 +42,35 @@ This course covers topics ranging from algorithmic complexity, stacks and queues
 <h1 id="algorithmic-complexity">Algorithmic Complexity</h1>
 
 
-<h3>Data structures are a smart way of organizing data, based on which we can develop efficient algorithms easily</h3>
+### Data structures are a smart way of organizing data, based on which we can develop efficient algorithms easily</h3>
 
-<ul>
-<li>They're a way of storing and organizing data to facilitate access and modifications</li>
-<li>We learn the strength and limitations of each data structure so that we know which one to use!</li>
-</ul>
+* They're a way of storing and organizing data to facilitate access and modifications
+* We learn the strength and limitations of each data structure so that we know which one to use!
 
-<h3>Analysis:</h3>
 
-<ul><li>Looking at worst-case, average-case, amortized, and expected worst-case for randomized algorithms</li>
-<li>This is more important than algorithms, but less fun to learn :')</li></ul>
+### Analysis:
 
-<h4>Abstract Data Types (ADTs) and Data Structures: Two related <strong>but</strong> different concepts.</h4>
+* Looking at worst-case, average-case, amortized, and expected worst-case for randomized algorithms
+* This is more important than algorithms, but less fun to learn :')
 
-<p>ADT: describes <strong>what</strong> (the interface)</p>
-  <ul><li>what data is stored</li>
-  <li>what operation is supported</li></ul>
-<p>Data structure: describes <strong>how</strong> (the implementation)</p>
-  <ul><li>how the data is stored</li>
-  <li>how to perform the operations</li></ul>
+#### Abstract Data Types (ADTs) and Data Structures: Two related **but** different concepts.
 
-<p><strong>Complexity</strong> is the amount of resource required by an algorithm, measured as a function of the input size. Complexity can be split into two types:</p>
+ADT: describes <strong>what</strong> (the interface)
+  * what data is stored
+  * what operation is supported
 
-<ul><li>time complexity: <strong>number of steps</strong> (running time) executed by an algorithm</li>
-  <li>space complexity: <strong>number of units of space</strong> required by an algorithm<ul></li>
-  <li>i.e. the number of elements in a list, the number of nodes in a tree/graph, etc.</li></ul>
-</ul>
+Data structure: describes <strong>how</strong> (the implementation)
+  * how the data is stored
+  * how to perform the operations
 
-```
+**Complexity** is the amount of resource required by an algorithm, measured as a function of the input size. Complexity can be split into two types:
+* time complexity: number of steps (running time) executed by an algorithm
+* space complexity: number of units of space required by an algorithm
+  * i.e. the number of elements in a list, the number of nodes in a tree/graph, etc.
+
+
 Example: Search a linked list.
-
+```
     SearchFortyTwo(L):
       z = L.head     // z is pointing at the linked list's first element
       while z != None and z.key != 42
@@ -80,12 +78,15 @@ Example: Search a linked list.
       return z
 ```
 
-<p>So let L = 41 -> 51 -> 12 -> 42 -> 20 -> 88. How many times will line 2 be executed?</p>
+So let L = 41 -> 51 -> 12 -> 42 -> 20 -> 88. How many times will line 2 be executed?
+* Since the z.key = 42 case is true after the z has been compared 4 times, line 2 will be executed **4 times**!
 
-Since the z.key = 42 case is true after the z has been compared 4 times, line 2 will be executed **4 times**!
+
 *Now let L = 41 -> 51 -> 12 -> 24 -> 20 -> 88. How many times will line 2 be executed?*
-**7 times!** The first case (z = None) is true when z is pointed at the last node.
-Analysis: Best-case, Worst-case, Average-case
+* **7 times!** The first case (z = None) is true when z is pointed at the last node.
+
+
+#### Analysis: Best-case, Worst-case, Average-case
 
 1. **Worst Case Running time**: What is the maximum (longest) running time for some input of size *n*?
 
@@ -96,15 +97,17 @@ T(n) = max {t(x): x is an input of size n}
 
 T(n) = max {t(x): x is an input of size n}
 
-1. **Average Case Running time**: The reality is, running time is "distributed" between the best and worst cases. So for our search linked list example, the running time is distributed between 1 and n + 1. The average case is the **expectation** of the running time. Let t_n be a random discrete variable whose possible values are between 1 and n + 1. The expectation would be
+1. **Average Case Running time**: The reality is, running time is "distributed" between the best and worst cases. So for our search linked list example, the running time is distributed between 1 and n + 1. The average case is the **expectation** of the running time. Let t_n be a random discrete variable whose possible values are between 1 and n + 1. The expectation would be:
 
 summation from best to worst case of t multiplied with the P(t_n = t)
 hold on! to take the expectation of a r.v., we need its pmf (which we get from its distribution)
+
+
 Example: What is the worst case running time among all possible linked lists L with length n?
 
-- This would be the case where no node is 42 (42 is not in L). So, T(n) = n + 1 (max number of steps to compare all nodes plus a final none).
+*  This would be the case where no node is 42 (42 is not in L). So, T(n) = n + 1 (max number of steps to compare all nodes plus a final none).
 
-Asymptotic: Upper, tight, and lower bounds:
+#### Asymptotic: Upper, tight, and lower bounds:
 
 1. O(f(n)) is the set of functions that grow *no faster* than f(n). If g is an element of O(f(n)), then we can say that g is asymptotically *upper bounded by f(n)* (g cannot grow faster than f(n)).
 2. Omega(f(n)) is the set of functions that grow *no slower* than f(n). If g is an element of Omega(f(n)), then we can say that g is asymptotically *lower bounded by f(n)* (g cannot grow slower than f(n)).
@@ -122,21 +125,23 @@ High level look at asymptotic notations:
 - simplification allows the development of the theory of computational complexity (an entire subfield of cs)
 
 ##### Combining Best/Avg/Worst and Asymptotic**: O and Omega can BOTH be used to upper and lower bound worst/best/average running time.
+
 Example: Commuting time to school from home case:
 * "Even the **worst** day is *less than 2 hours*". So _everyday_ is less than 2 hours. This is the upper bound on the worst case for commuting.
 (!) Equivalently, *how do you argue that some algorithm A(x)'s worst case running time is in O(n^2)?*
-First, let's deconstruct the question. Worst case is the longest running time for some input of size n. Big O is the set of functions that grow no faster than f(n) (i.e., the upper bound, and in this case, cn^2). So, the question is asking, how do we know that the running time is no larger than cn^2?
-We can check for every input x of size n, the running time of the algorithm A with input x is no larger than cn^2, where c > 0 and a constant.
+<p>First, let's deconstruct the question. Worst case is the longest running time for some input of size n. Big O is the set of functions that grow no faster than f(n) (i.e., the upper bound, and in this case, cn^2). So, the question is asking, how do we know that the running time is no larger than cn^2?</p>
+<p>We can check for every input x of size n, the running time of the algorithm A with input x is no larger than cn^2, where c > 0 and a constant.</p>
 * 2."The **worst** day is *more than 2 hours*". So there is no day where the commute is less than 2 hours. This is the lower bound on the best case for commuting.
 (!) Equivalently, *how do you argue that some algorithm A(x)'s best case running time is in Omega(n^2)?*
-The best case is the shortest running time of an algorithm for some input x of size n. Omega is the set of functions that grow no slower than f(n) (in this case, cn^2).
-So, the question is asking, how do we know that the shortest running time is no less than cn^2?
+<p>The best case is the shortest running time of an algorithm for some input x of size n. Omega is the set of functions that grow no slower than f(n) (in this case, cn^2).</p>
+<p>So, the question is asking, how do we know that the shortest running time is no less than cn^2?</p>
 We can check for every input x of size n, the running time of the algorithm A with input x is no less than cn^2, where c > 0 and a constant.
 
 <h1 id="stacks-queues-heaps">Stacks, Queues, and Heaps</h1>
 
+## Stacks
 
-# Queues and Heaps
+## Queues and Heaps
 This week, we're looking at the abstract data type called 'queue' and the heap data structure.
 ##### Queue: first in, first serve (FIFO). A queue is a collection of elements with the supported operations **enqueue(Q,x), dequeue(Q), and peekfront(Q)**.
 ##### Max-Priority Queue: a collection of elements **with priorities**, i.e., each element x has k priority. (ex: oldest person is served first). It has the supported operations **insert(Q,x), ExtractMax(Q), Max(Q), and IncreasePriority(Q,x,k) which increases x's priority to k**.
