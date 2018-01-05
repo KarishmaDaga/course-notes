@@ -153,17 +153,19 @@ We want languages to be able to model every computational task. We need several 
   * contains all members of A
   * closed under operation in P
 
-Given a set (language) defined inductively, how can we tell if some x∈X is in the language (x∈L) or not (x∉L)?
+*Given a set (language) defined inductively, how can we tell if some x∈X is in the language (x∈L) or not (x∉L)?*
 * Proving membership is a lot easier than proving non-membership.
+
 ![alt text](structural-induction-example2.png)
-We need to generate abbaa from the core set and its operations.
+
+*We need to generate abbaa from the core set and its operations.*
 
 
 1. a belongs to the core set A
 2. we get 'baa' after applying P_3(a,a)
 3. 'abbaa' after applying P_4(a, baa)
 
-Is 𝜀 ∈ I(A, P)?
+*Is 𝜀 ∈ I(A, P)?*
 - NO.
   - Each operation in P increases length (simple reasoning)
   - This is more difficult than proving membership
