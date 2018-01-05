@@ -1,7 +1,7 @@
 # CS and Math Course Notes
 
 I type up my handwritten lecture notes from my cs and math classes so that I don't die around 
-midterms/finals/etc, and I thought it would be a good idea to share them online! Everything is written in markdown for ease. 
+midterms/finals/etc, and I thought it would be a good idea to share them online! Everything is written in markdown for ease and I update these notes throughout the semester.
 
 I'd greatly appreciate reports of any typos and factual errors you find. Open an issue if you find something that should be fixed.
 
