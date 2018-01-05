@@ -15,6 +15,6 @@ Hi! These are my notes for various undergrad computer science and mathematics co
 * [CISC 260: Programming Paradigms](cisc260.md)
 * [STAT 269: Statistics](stat269.md)
 
-If these have been of help or there's a correction to be made, let me know at [karishma.daga@queensu.ca](mailto:karishma.daga@wqueensu.ca) !</p>
+If these have been of help or there's a correction to be made, let me know at [karishma.daga@queensu.ca](mailto:karishma.daga@wqueensu.ca) !
 
 You can also find my sordid details at [karishmadaga.com](http://karishmadaga.com) or laugh at my [twitter](https://twitter.com/karishmadagaa).
