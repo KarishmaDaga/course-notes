@@ -1,3 +1,9 @@
+<style>
+h1 a {
+  display: none;
+}
+</style>
+
 [All Notes](http://karishmadaga.com/course-notes) // [About](http://karishmadaga.com)
 # CISC 223: Software Specifications
 

@@ -6,7 +6,7 @@ h1 a {
 
 # Course Notes
 
-Hi! These are my notes for various undergrad computer science and mathematics courses at Queen's University.
+Hi! These are my notes for various undergrad computer science and mathematics courses at [Queen's University](http://queensu.ca/).
 
 ## Courses
 * [CISC 235: Data Structures](cisc235.md)
@@ -17,4 +17,4 @@ Hi! These are my notes for various undergrad computer science and mathematics co
 
 If these have been of help or there's a correction to be made, let me know at [karishma.daga@queensu.ca](mailto:karishma.daga@wqueensu.ca) !</p>
 
-You can also peep me at 
+You can also find my sordid details at [karishmadaga.com](http://karishmadaga.com) or laugh at my [twitter](https://twitter.com/karishmadagaa).
