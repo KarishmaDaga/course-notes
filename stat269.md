@@ -16,4 +16,4 @@ Course Description: Basic techniques of statistical estimation such as best unbi
 
 
 
-<h1 id = "#stat-est">Statistical Estimation</h2>
+<h1 id = "#stat-est">Statistical Estimation</h1>
