@@ -60,7 +60,7 @@ The uses of formal methods:
 It also acts as an 'early warning system' for what is programmatically impossible.
 There exist more computing problems than the number of all possible programs, so there exist problems that are not solvable by an program or algorithm (even if it is given unbounded space and time to perform its operations).
 
-<h2 id="halting">**Famous example: The Halting Problem**</h2>
+<h2 id="halting">Famous example: The Halting Problem</h2>
 
 [Good Reference for this topic](http://www.cgl.uwaterloo.ca/csk/halt/)
 
@@ -153,7 +153,7 @@ We want languages to be able to model every computational task. We need several 
   * contains all members of A
   * closed under operation in P
 
-  
+
 
 <h1 id="#state-transition">State-Transition Diagrams</h1>
 
