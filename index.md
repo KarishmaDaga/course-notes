@@ -16,6 +16,7 @@ h1 a {
 Hi! These are my notes for various undergrad computer science and mathematics courses at [Queen's University](http://queensu.ca/).
 
 ## Courses
+### Winter 2018
 * [CISC 235: Data Structures](cisc235.md)
 * [CISC 221: Computer Architecture](cisc221.md)
 * [CISC 223: Software Specifications](cisc223.md)
