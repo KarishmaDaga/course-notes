@@ -30,6 +30,12 @@ h1 a {
 * [Unimplementable Specifications](#more-verification)
 * [Loop Invariants and other topics](#loop-invariants)
 
+## Extra Reading
+* [Parsing and Lexical Analysis - Vaidehi Joshi](https://medium.com/basecs/reading-code-right-with-some-help-from-the-lexer-63d0be3d21d)
+* [Parsing and Abstract Syntax Trees - Vaidehi Joshi](https://medium.com/basecs/leveling-up-ones-parsing-game-with-asts-d7a6fc2400ff)
+* [A Deeper Inspection Into Compilation And Interpretation - Vaidehi Joshi](https://medium.com/basecs/a-deeper-inspection-into-compilation-and-interpretation-d98952ebc842)
+* [Grammatically Rooting Oneself With Parse Trees - Vaidehi Joshi](https://medium.com/basecs/grammatically-rooting-oneself-with-parse-trees-ec9daeda7dad)
+* [see more at basecs](https://medium.com/basecs)
 <hr>
 <h1 id="#alph-str-lang">Alphabets, Strings, and Languages</h1>
 

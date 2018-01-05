@@ -16,7 +16,12 @@ h1 a {
 
 ## Topics
 
-* [Data Representation](#data-rep)
+* [Character Encodings](#data-rep)
+  * [Abstraction](#abstraction)
+  * [Endianness](#Endianness)
+  * [ASCII](#ascii)
+  * [Unicode](#unicode)
+  * [Hexadecimal](#Hexadecimal)
 * [Machine-Level Representation of Programs](#machine-level-rep)
   * [Machine Architecture - ARM, IA-32, etc](#machine-arch)
   * [Assembly Language Programming](#assembly)
@@ -30,8 +35,21 @@ h1 a {
   * [I/O, Role of Operating Systems, Interrupts and Traps](#i-o)
   * [Interrupt service routines, event driven programming](#event-driven-pro)
 
+## Extra Reading
+* [Machine-Level Representation of Programs, CMU](http://csapp.cs.cmu.edu/2e/ch3-preview.pdf)
+* [Hexes and other Magical Numbers - Vaidehi Joshi](https://medium.com/basecs/hexs-and-other-magical-numbers-9785bc26b7ee)
+* [Bits, Bytes, Building with Binary - Vaidehi Joshi](https://medium.com/basecs/bits-bytes-building-with-binary-13cb4289aafa)
+* [A Most Perfect Union: Just-In-Time Compilers - Vaidehi Joshi](https://medium.com/basecs/a-most-perfect-union-just-in-time-compilers-2938712a9f6a)
 <hr>
 <h1 id="#data-rep">Data Representation</h1>
+
+<h2 id="abstraction">Abstraction</h2>
+Abstraction is the process of removing or hiding irrelevant details.  Everything is just a sequence of bits (binary digits).  There are two possible values for a bit, and those values can have arbitrary labels such as up/down, left/right, 0/1, on/off, pass/fail.
+Since there can be k places and 2 choices for each, there are 2^k combinations.
+
+
+
+
 
 <h1 id="#machine-level-rep">Machine-Level Representation of Programs</h1>
 
