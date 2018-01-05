@@ -109,10 +109,10 @@ We model decision problems using *formal languages*.
 
 A decision problem has two components:
 * A domain set X
-* a language L that is a subset of X (L <= X)
+* a language L that is a subset of X (L ⊆ X)
 
-Our decision problem is then *"for some x which is an element of X, is x an element of L"*? Example:
-* x is an element of the set of all integers Z and L = set of prime numbers
+Our decision problem is then *"for some x which ∈ of X, is x an element of L"*? Example:
+* x ∈ of the set of all integers Z and L = set of prime numbers
 * x = set of all email messages and L = set of all spam emails
 * x = set of graphs and L = set of connected graphs
 
@@ -149,10 +149,36 @@ We want languages to be able to model every computational task. We need several 
 
   Given these components, we can define the inductive set I(A, P) as all domain elements that can be reached from the core set by applying a finite sequence of operations from P.
 
-  #### Inductive Set: defined by core set A and operations P - is the _smallest set_ satisfying:
+#### Inductive Set: defined by core set A and operations P - is the _smallest set_ satisfying:
   * contains all members of A
   * closed under operation in P
 
+Given a set (language) defined inductively, how can we tell if some x∈X is in the language (x∈L) or not (x∉L)?
+* Proving membership is a lot easier than proving non-membership.
+![alt text](structural-induction-example2.png)
+We need to generate abbaa from the core set and its operations.
+
+
+1. a belongs to the core set A
+2. we get 'baa' after applying P_3(a,a)
+3. 'abbaa' after applying P_4(a, baa)
+
+Is 𝜀 ∈ I(A, P)?
+- NO.
+  - Each operation in P increases length (simple reasoning)
+  - This is more difficult than proving membership
+
+#### Closure: A set B is closed under the operations of P if for every f∈P and every x,y∈B, f(x,y)∈B.
+
+**So the inductive set can _also_ be defined as the intersection over the _entire_ collection of sets that satisfy closure**
+
+Examples of Proofs by Structural Induction:
+
+![alt text](structural-induction-example.png)
+
+Claim: every member of I(A, P) has more "a's" than "b's", To put this more simply, let B = {x : the number of a's > the number of b's}. We wish to show I(A, P) ⊆ B.
+
+Proof: We will prove this claim by structural induction.
 
 
 <h1 id="#state-transition">State-Transition Diagrams</h1>
