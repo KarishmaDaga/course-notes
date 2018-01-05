@@ -16,3 +16,5 @@ Hi! These are my notes for various undergrad computer science and mathematics co
 * [STAT 269: Statistics](stat269.md)
 
 If these have been of help or there's a correction to be made, let me know at [karishma.daga@queensu.ca](mailto:karishma.daga@wqueensu.ca) !</p>
+
+You can also peep me at 

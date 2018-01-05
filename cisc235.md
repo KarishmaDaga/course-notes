@@ -12,7 +12,7 @@ h1 a {
 
 [All Notes](http://karishmadaga.com/course-notes) // [About](http://karishmadaga.com)
 # CISC 235: Data Structures
-Course Description: The design and implementation of advanced data structures and related algorithms, including correctness and complexity analysis. Efficient implementation of lists, sets, dictionaries, priority queues, trees, graphs, and networks using arrays, hash tables, heaps, and hierarchical linked structures. String and graph problems, such as string matching and shortest path. External storage and input-output complexity. 
+This course covers topics ranging from algorithmic complexity, stacks and queues, heaps, sorting algorithms, BSTs and its various types, and more. I'll be updating it throughout the course!
 
 ## Topics
 
@@ -43,7 +43,7 @@ Course Description: The design and implementation of advanced data structures an
 <h1 id="algorithmic-complexity">Algorithmic Complexity</h1>
 
 
-### Data structures are a smart way of organizing data, based on which we can develop efficient algorithms easily
+### Data structures are a smart way of organizing data, based on which we can develop efficient algorithms easily</h3>
 
 * They're a way of storing and organizing data to facilitate access and modifications
 * We learn the strength and limitations of each data structure so that we know which one to use!
@@ -56,11 +56,11 @@ Course Description: The design and implementation of advanced data structures an
 
 #### Abstract Data Types (ADTs) and Data Structures: Two related **but** different concepts.
 
-ADT: describes **what** (the interface)
+ADT: describes <strong>what</strong> (the interface)
   * what data is stored
   * what operation is supported
 
-Data structure: describes **how** (the implementation)
+Data structure: describes <strong>how</strong> (the implementation)
   * how the data is stored
   * how to perform the operations
 
@@ -87,18 +87,18 @@ So let L = 41 -> 51 -> 12 -> 42 -> 20 -> 88. How many times will line 2 be execu
 * **7 times!** The first case (z = None) is true when z is pointed at the last node.
 
 
-### Analysis: Best-case, Worst-case, Average-case
+#### Analysis: Best-case, Worst-case, Average-case
 
 1. **Worst Case Running time**: What is the maximum (longest) running time for some input of size *n*?
 
 Let t(x) be the *running time* of an algorithm A with input of size x.
 T(n) = max {t(x): x is an input of size n}
 
-2. **Best Case Running time**: Not very interesting, rarely studied. We should prepare for the worst, not the best!
+1. **Best Case Running time**: Not very interesting, rarely studied. We should prepare for the worst, not the best!
 
 T(n) = max {t(x): x is an input of size n}
 
-3. **Average Case Running time**: The reality is, running time is "distributed" between the best and worst cases. So for our search linked list example, the running time is distributed between 1 and n + 1. The average case is the **expectation** of the running time. Let t_n be a random discrete variable whose possible values are between 1 and n + 1. The expectation would be:
+1. **Average Case Running time**: The reality is, running time is "distributed" between the best and worst cases. So for our search linked list example, the running time is distributed between 1 and n + 1. The average case is the **expectation** of the running time. Let t_n be a random discrete variable whose possible values are between 1 and n + 1. The expectation would be:
 
 summation from best to worst case of t multiplied with the P(t_n = t)
 hold on! to take the expectation of a r.v., we need its pmf (which we get from its distribution)
@@ -108,7 +108,7 @@ Example: What is the worst case running time among all possible linked lists L w
 
 *  This would be the case where no node is 42 (42 is not in L). So, T(n) = n + 1 (max number of steps to compare all nodes plus a final none).
 
-### Asymptotic: Upper, tight, and lower bounds:
+#### Asymptotic: Upper, tight, and lower bounds:
 
 1. O(f(n)) is the set of functions that grow *no faster* than f(n). If g is an element of O(f(n)), then we can say that g is asymptotically *upper bounded by f(n)* (g cannot grow faster than f(n)).
 2. Omega(f(n)) is the set of functions that grow *no slower* than f(n). If g is an element of Omega(f(n)), then we can say that g is asymptotically *lower bounded by f(n)* (g cannot grow slower than f(n)).
@@ -125,7 +125,7 @@ High level look at asymptotic notations:
 - it is a **simplification**(!!) of the 'real' running time. In the real world, constant factor matters! Hardware matters! Implementation matters!
 - simplification allows the development of the theory of computational complexity (an entire subfield of cs)
 
-#### Combining Best/Avg/Worst and Asymptotic**: O and Omega can BOTH be used to upper and lower bound worst/best/average running time.
+##### Combining Best/Avg/Worst and Asymptotic**: O and Omega can BOTH be used to upper and lower bound worst/best/average running time.
 
 Example: Commuting time to school from home case:
 * "Even the **worst** day is *less than 2 hours*". So _everyday_ is less than 2 hours. This is the upper bound on the worst case for commuting.
@@ -150,22 +150,20 @@ This week, we're looking at the abstract data type called 'queue' and the heap d
 
 The applications of Priority Queues include job scheduling in operating systems (processes have different priorities), bandwidth management in a router, finding the minimum spanning tree of a graph, etc.
 
-### Implement a Max-Priority Queue
+##### Implement a Max-Priority Queue
 Using an unsorted linked list,
 * **Insert(Q,x)** : x is a node. Insert x at the head, which has the tight bound of 1.
 * **IncreasePriority(Q,x,k)** : Change x's priority to k, which has the tight bound of 1.
 * **Max(Q)** : Have to go through the whole list, which has the tight bound of n.
 * **ExtractMax(Q)** : Go through the whole list to find x with max priority (O(n)), then delete it (O(1) if double linked) and return it, so overall it has a tight bound of n.
-
-
 Using a sorted and unsorted linked list both give us pretty bad tight bounds of n for some operations, and that does not scale well for very large inputs. Is there a better way to link these elements?
-... Yes! We can use a _heap_!
+... Yes! We can use a heap!
 
-#### **Heap**: A heap is a **binary heap** stored in an array, which is a binary tree
-#### **Binary Max-Heap**: A binary max-heap is a *nearly-complete* binary tree that has the *max-heap property*. A binary tree has at most 2 children for each node. A nearly-complete binary tree means that every level is completely filled except for the bottom level, where nodes are filled to as *far left* as possible.
+##### **Heap**: A heap is a **binary heap** stored in an array, which is a binary tree
+###### **Binary Max-Heap**: A binary max-heap is a *nearly-complete* binary tree that has the *max-heap property*. A binary tree has at most 2 children for each node. A nearly-complete binary tree means that every level is completely filled except for the bottom level, where nodes are filled to as *far left* as possible.
 Why is it important for it to be a nearly-complete binary tree?
 1. Because we can then store the tree in an array, and each node knows which index has its parent or left/right child.
-LeftChild(index) = 2(index)
+LeftChild(index) = 2*index
 RightChild(index) = 2(index) + 1
 Parent(index) = floor(index/2)
 2. The height of a complete binary tree with n nodes is the tight bound of log n (which is why the operations for a max-priority queue have logn worst-case running time)
