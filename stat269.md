@@ -2,6 +2,13 @@
 h1 a {
   display: none;
 }
+
+.container-lg {
+  min-width: 200px;
+  max-width: 880px;
+  padding: 45px;
+}
+
 </style>
 
 [All Notes](http://karishmadaga.com/course-notes) // [About](http://karishmadaga.com)
@@ -16,4 +23,4 @@ Course Description: Basic techniques of statistical estimation such as best unbi
 
 
 
-<h1 id = "#stat-est">Statistical Estimation</h1>
+<h1 id = "#stat-est">Statistical Estimation</h2>

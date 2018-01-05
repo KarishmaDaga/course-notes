@@ -3,6 +3,11 @@
 h1 a {
   display: none;
 }
+.container-lg {
+  min-width: 200px;
+  max-width: 880px;
+  padding: 45px;
+}
 </style>
 
 [All Notes](http://karishmadaga.com/course-notes) // [About](http://karishmadaga.com)
@@ -24,6 +29,12 @@ h1 a {
 * [Exceptions, Devices, Interrupts](#excep-dev-interr)
   * [I/O, Role of Operating Systems, Interrupts and Traps](#i-o)
   * [Interrupt service routines, event driven programming](#event-driven-pro)
+
+* [Disjoint Sets](#disjoin-sets)
+* [Shortest Paths](#shortest-paths)
+  * [Dijkstra](#dijkstra)
+  * [Bellman-Ford](#bell-ford)
+  * [Extras](#extra-paths)
 
 <hr>
 <h1 id="#data-rep">Data Representation</h1>
