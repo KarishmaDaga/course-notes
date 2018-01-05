@@ -30,12 +30,6 @@ h1 a {
   * [I/O, Role of Operating Systems, Interrupts and Traps](#i-o)
   * [Interrupt service routines, event driven programming](#event-driven-pro)
 
-* [Disjoint Sets](#disjoin-sets)
-* [Shortest Paths](#shortest-paths)
-  * [Dijkstra](#dijkstra)
-  * [Bellman-Ford](#bell-ford)
-  * [Extras](#extra-paths)
-
 <hr>
 <h1 id="#data-rep">Data Representation</h1>
 
