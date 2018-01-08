@@ -47,7 +47,14 @@ This course covers topics ranging from algorithmic complexity, stacks and queues
 
 * They're a way of storing and organizing data to facilitate access and modifications
 * We learn the strength and limitations of each data structure so that we know which one to use!
+* **programs = algorithms + data structures**
 
+### Possible Problems:
+1. Organize a dictionary to facilitate spell checking and/or autocorrect
+2. Organize a representation of the internet to facilitate routing decisions
+3. Organize a set of "high interest" words so that documents can be scanned for containing any of them (if we are okay with a few false positives)
+4. Given a data set that is larger than internal memory, organize it on an external device to facilitate searches
+5. Create a login/password system where the passwords aren't stored in any form on the server
 
 ### Analysis:
 
