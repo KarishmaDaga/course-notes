@@ -91,7 +91,7 @@ h1 a {
 
 <h1 id="lambda">Lambda Calculus: A prelude</h1>
 
-In the 1930s, in the process of trying to solve a mathematical logic problem, Turing developed an abstract model of mechanical, procedural computation: a machine that could read in a string o 0's and 1's, a finite state control that could make decisions and write 0's and 1's to its internal memory, and an output space where the computation's result would be displayed. The fundamental mechanism of the Turing machine - reading data, executing a sequence of instructions to modify internal memory, and producing output - would soon become the von Neumann architecture lying at the heart of modern computers.
+In the 1930s, in the process of trying to solve a mathematical logic problem, Turing developed an abstract model of mechanical, procedural computation: a machine that could read in a string of 0's and 1's, a finite state control that could make decisions and write 0's and 1's to its internal memory, and an output space where the computation's result would be displayed. The fundamental mechanism of the Turing machine - reading data, executing a sequence of instructions to modify internal memory, and producing output - would soon become the von Neumann architecture lying at the heart of modern computers.
 
 <h2 id="history">Alonzo Church</h2>
 
