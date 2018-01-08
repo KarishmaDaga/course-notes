@@ -33,6 +33,7 @@ h1 a {
 * [Course Overview](#overview)
 * [Lambda Calculus](#lambda)
   * [Alonzo Church](#history)
+  * [A Paradigm Shift (In You)](#a-paradigm-shift-in-you)
 * [Intro to Haskell](#intro-haskell)
   * [Recursion](#recursion)
   * [Lists and Tuples](#list-tuple)
