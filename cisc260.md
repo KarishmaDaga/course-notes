@@ -29,16 +29,19 @@ h1 a {
 ## Topics
 
 * [Course Overview](#overview)
-* [](#)
-* [](#)
-* [](#)
-* [](#)
-* [](#)
-* [](#)
-* [](#)
-* [](#)
-* [](#)
-* [](#)
+* [Intro to Haskell](#intro-haskell)
+  * [Recursion](#recursion)
+  * [Lists and Tuples](#list-tuple)
+  * [Proofs](#proofs)
+  * [High Order Functions](#high-fnc)
+  * [Types and Type Checking](#types)
+  * [Algebraic Types](#alg-types)
+  * [Lazy Programming](#lazy)
+* [Intro to Prolog](#prolog)
+  * [Prolog Lists and Arithmetic](#list-arith)
+  * [Cuts and Negotiation](#cuts)
+  * [Searching](#searching)
+
 
 ## Assigned Readings
 * Week 1: Chapters 1-3 of Haskell TB.
@@ -80,3 +83,7 @@ h1 a {
 * Boeing corp, electrical assembly tasks
 * geology: finding gold
 * rapid prototyping of AI problems
+
+<h1 id="intro-haskell">Intro to Haskell</h1>
+
+<h1 id="prolog">Intro to Prolog</h1>
