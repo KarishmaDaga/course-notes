@@ -10,7 +10,7 @@ h1 a {
 </style>
 
 [All Notes](http://karishmadaga.com/course-notes) // [About](http://karishmadaga.com)
-# CISC 223: Software Specifications
+# CISC 223: Introduction to the Theory of Computation
 
 ## Topics
 

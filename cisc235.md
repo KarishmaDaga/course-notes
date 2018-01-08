@@ -12,7 +12,7 @@ h1 a {
 
 [All Notes](http://karishmadaga.com/course-notes) // [About](http://karishmadaga.com)
 # CISC 235: Data Structures
-This course covers topics ranging from algorithmic complexity, stacks and queues, heaps, sorting algorithms, BSTs and its various types, and more. I'll be updating it throughout the course!
+Design and implementation of advanced data structures and related algorithms, including correctness and complexity analysis. Efficient implementation of lists, sets, dictionaries, priority queues, trees, graphs, and networks using arrays, hash tables, heaps, and hierarchical linked structures. String and graph problems, such as string matching and shortest path. External storage and input-output complexity.
 
 ## Topics
 
@@ -37,6 +37,13 @@ This course covers topics ranging from algorithmic complexity, stacks and queues
   * [Dijkstra](#dijkstra)
   * [Bellman-Ford](#bell-ford)
   * [Extras](#extra-paths)
+
+### Administrative Details:
+  * Office Hours: Goodwin 537 from Monday 2:00-4:00 pm
+    and Thursday 9:30-11:30 am (may change).
+  * There are assigned readings, so do them!
+  * 4 Assignments: lowest counts **4%**, the other three count **8%** (total: 28%)
+  * 4 Tests: lowest counts **12%**, the other three count **20%** (total: 72%)
 
 <hr>
 
