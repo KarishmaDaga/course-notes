@@ -22,6 +22,7 @@ Hi! These are my notes for various undergrad computer science and mathematics co
 * [CISC 223: Software Specifications](cisc223.md)
 * [CISC 260: Programming Paradigms](cisc260.md)
 * [STAT 269: Statistics](stat269.md)
+* [MATH 210: Rings and Fields](math210.md)
 
 If these have been of help or there's a correction to be made, let me know at [karishma.daga@queensu.ca](mailto:karishma.daga@wqueensu.ca) !
 
