@@ -34,7 +34,7 @@ h1 a {
 * [Lambda Calculus](#lambda)
   * [Alonzo Church](#history)
   * [A Paradigm Shift (In You)](#a-paradigm-shift-in-you)
-* [Intro to Haskell](#intro-haskell)
+* [Intro to Haskell](#Intro-to-Haskell)
   * [Recursion](#recursion)
   * [Lists and Tuples](#list-tuple)
   * [Proofs](#proofs)
@@ -112,6 +112,61 @@ There is no concept of _time_ required for a certain sequence of 'steps', and th
 ### A Paradigm Shift (In You)
 The influence of Church's lambda calculus is most obvious today in the _functional programming paradigm_, and it had heavily influenced languages like Lisp, ML, Haskell (which we will be learning in this course), and more. The goal of this course is to open our minds to different ways of solving problems and to approach problems more algorithmically.
 
-<h1 id="intro-haskell">Intro to Haskell</h1>
+# Intro to Haskell
+
+#### Jan 9 2018, required reading: chapters 1-3 of Haskell Textbook (not very long)
+* Ch 1: Overview
+* Ch 2: using Hugs/GHC, simple definitions
+* Ch 3: basic haskell types, conditionals, some other important rules
+
+Haskell is a large language. At its core, it is functional. On the outside, it has a specialized layer consisting of I/O, monads, etc. We're not allowed to use those for tests and projects.
+
+```
+Prelude> 7 + 2
+9
+Prelude> 3*(2+4)
+18
+-- floating point division, full value.
+Prelude> 14.0/3.0
+4.667
+Prelude> 14 / 3
+4.667
+-- integer division, truncated. div is a function for this.
+-- Recall: functions in haskell are as f x
+Prelude> div 14 3
+4
+Prelude> mod 14 3
+2
+Prelude> sqrt 35
+5.916..
+-- it means the value of the last expression we computed, only works interactively
+Prelude> it + 5
+10.916..
+```
+
+First script example, very primitive haskell program
+```
+module Jan09 where
+a = 43
+b = a + 1
+year = 2018
+
+plus1 x = x + 1
+
+average x y = (x + y) / 2
+
+intAvg x y = div (x + y) 2
+
+a :: integer
+-- cannot use operations like sqrt that need a floating point number
+
+-- list of type of chars
+"abc" :: [Char]
+```
+We can load this into a compiler or run it from the terminal.
+
+lost track around 11 pm, watch lecture video from that point...
+covered functions, conditionals, and variables
+
 
 <h1 id="prolog">Intro to Prolog</h1>

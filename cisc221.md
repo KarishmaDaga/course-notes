@@ -16,11 +16,11 @@ h1 a {
 
 ## Topics
 
-* [Character Encodings](#data-rep)
-  * [Abstraction](#abstraction)
+* [Character Encodings](#Character-Encodings)
+  * [Abstraction](#Abstraction)
   * [Endianness](#Endianness)
-  * [ASCII](#ascii)
-  * [Unicode](#unicode)
+  * [ASCII](#ASCII)
+  * [Unicode](#Unicode)
   * [Hexadecimal](#Hexadecimal)
 * [Machine-Level Representation of Programs](#machine-level-rep)
   * [Machine Architecture - ARM, IA-32, etc](#machine-arch)
@@ -43,12 +43,17 @@ h1 a {
 <hr>
 <h1 id="#data-rep">Data Representation</h1>
 
-<h2 id="abstraction">Abstraction</h2>
+## Abstraction
 Abstraction is the process of removing or hiding irrelevant details.  Everything is just a sequence of bits (binary digits).  There are two possible values for a bit, and those values can have arbitrary labels such as up/down, left/right, 0/1, on/off, pass/fail.
 Since there can be k places and 2 choices for each, there are 2^k combinations.
 
+## Endianness
+Consider the sequence 1010. This sequence of bits has different interpretations when following different conventions.
 
-
+* Unsigned, little-endian: (1 x 2^0) + (0 x 2^1) + (1 x 2^2) + (0 x 2^3) = 1 + 4 = 5
+* Unsigned, big-endian: (0 x 2^0) + (1 x 2^1) + (0 x 2^2) + (1 x 2^3) = 10
+* Two's complement, little-endian
+* 
 
 
 <h1 id="#machine-level-rep">Machine-Level Representation of Programs</h1>
