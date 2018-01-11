@@ -17,6 +17,7 @@ h1 a {
 * [Course reference, Stanford](http://www.scs.stanford.edu/14sp-cs240h/).
 * [Course reference, UofT 💖](http://www.cs.toronto.edu/~david/courses/csc324_w15/).
 * [Course Notes, UofT](http://www.cs.toronto.edu/~david/courses/csc324_w15/res/notes.pdf)
+* [Haskell Full Tutorial](http://learnyouahaskell.com/introduction#about-this-tutorial)
 
 ### Administrative Details:
 * Office Hours: Goodwin 527 from 1-2 pm on M/T/Th (may change).
@@ -35,6 +36,7 @@ h1 a {
   * [Alonzo Church](#history)
   * [A Paradigm Shift (In You)](#a-paradigm-shift-in-you)
 * [Intro to Haskell](#Intro-to-Haskell)
+  * [Online Tutorial Notes](#Online-Tutorial-Notes)
   * [Recursion](#recursion)
   * [Lists and Tuples](#list-tuple)
   * [Proofs](#proofs)
@@ -168,5 +170,68 @@ We can load this into a compiler or run it from the terminal.
 lost track around 11 pm, watch lecture video from that point...
 covered functions, conditionals, and variables
 
+# Online Tutorial Notes
+
+In imperative languages such that Java, we can give computers a sequence of tasks and then it executes them. While executing them, it can change state:
+
+```
+a = 5
+
+// sometime later
+
+a = "dog"
+```
+
+You also have control flow structures for doing some action several times.
+
+#### In purely functional programming, you don't tell the computer what to do as such, but rather you **tell it what stuff _is_**.
+* The factorial of a number is the product of all the numbers from 1 to that number
+* the sum of a list of numbers is the first number plus the sum of all the other numbers, and so on.
+
+You express the above in the form of _functions_.
+You also can't change the state of a variable.
+
+#### Haskell is _lazy_.
+* haskell won't execute functions and calculate things until it's really forced to show you a result
+* that allows you to think of programs as a series of **transformations on data**. It also allows cool things such as ~infinite data structures~ (quoi?!)
+* haskell is **statically typed**. When you compile your program, the compiler knows which piece of code is a number, which is a string, and so on, so a lot of errors are caught at compile time rather than runtime.
+  * if you try to add a number and a string, haskell will whine at you (it has a v. good type system that has **type inference**, so you don't have to explicitly label every piece of code with a type)
+* haskell is **elegant and concise**
+
+### Simple Examples
+
+```
+Prelude> 2 + 15
+17
+Prelude> 49 * 100
+4900
+Prelude> 1892 - 1472
+420 :')
+Prelude> 5 / 2
+2.5
+Prelude> div 5 2
+2
+Prelude> True && False
+False
+Prelude> False || True
+True
+Prelude> 5 == 5
+True
+Prelude> not False
+True
+Prelude> "hello" == "hello"
+True
+Prelude> succ 8
+9
+Prelude> min 9 10
+9
+Prelude> max 3.4 5
+5
+Prelude> succ 9 + max 5 4 + 1
+16
+```
+### Lists
+* In haskell, lists are a _homogenous_ data structure. It stores elements of the same type (like java for arrays)
+*
 
 <h1 id="prolog">Intro to Prolog</h1>
