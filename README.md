@@ -1,7 +1,7 @@
 # CS and Math Course Notes
 
 I type up my handwritten lecture notes from my cs and math classes so that I don't die around 
-midterms/finals/etc, and I thought it would be a good idea to share them online! Everything is written in markdown for ease and I update these notes throughout the semester.
+midterms/finals/etc, and I thought it would be a good idea to share them online! Everything is written in markdown for ease and I update these notes throughout the semester. For more theory heavy courses like rings and fields or real analysis, I'll just upload pictures of my handwritten notes.
 
 I'd greatly appreciate reports of any typos and factual errors you find. Open an issue if you find something that should be fixed.
 
@@ -14,5 +14,6 @@ I'd greatly appreciate reports of any typos and factual errors you find. Open an
 * [Theory of Computation/Software Specifications](http://karishmadaga.com/course-notes/cisc223.html)
 * [Probability and Statistics II](http://karishmadaga.com/course-notes/stat269.html)
 * [Rings and Fields](http://karishmadaga.com/course-notes/math210.html)
+* [Real Analysis](http://karishmadaga.com/course-notes/math281.html)
 
 
