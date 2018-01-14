@@ -19,6 +19,7 @@ h1 a {
   * [Classification of Computing Problems](#classification)
   * [Modelling Decision Problems](#modelling)
   * [Inductive Definition of Sets and Structural Induction](#induction)
+  * [Regular Expressions and their Operations](#Regular-Expressions-and-their-Operations)
 * [State-Transition Diagrams](#alph-str-lang)
 * [Regular Expressions vs State Diagrams](#reg-exp)
 * [Minimizing State Transition Diagrams, Nonregular Languages](#min-state-trans-diagrams)
@@ -139,6 +140,23 @@ Example:
 
 A compiler's task of checking their input (the code of a program) to see if the program is valid (if the code is in the language), can be seen as checking **membership** in such a language.
 
+#### Quick Summary Example:
+* ∑ = {a, b, ...}
+* ∑* = {ab, abb, bab, ...}
+* L = {ab, bab, baa} where L⊆∑*
+
+
+### More Terminology:
+* prefix: any intitial part of the string (must include the first symbols)
+* suffix: any end part of the string (must include the last symbols)
+* substring: any range of symbols of the string
+
+Example: ∑ = {a, b, c} and S = abac
+prefixes: 𝜀, a, ab, aba, abac
+suffixes: c, ac, bac, abac
+substrings: all of the prefixes, suffixes, and _ba_ and _b_
+
+
 <h2 id="induction">Inductive Definition of Sets and Structural Induction</h2>
 
 ### Formal tools for Defining Sets
@@ -180,14 +198,31 @@ We want languages to be able to model every computational task. We need several 
 
 **So the inductive set can _also_ be defined as the intersection over the _entire_ collection of sets that satisfy closure**
 
-Examples of Proofs by Structural Induction:
+## Regular Expressions and their Operations
 
-![alt text](structural-induction-example.png)
+Recall: Tasks will always be a decision problem. A decision problem is *"for some x ∈ X, is x an element of L"*? The set of all possible tasks is {L : L ⊆ {a,b}* }. This set is an infinite set of finite strings.
 
-Claim: every member of I(A, P) has more "a's" than "b's", To put this more simply, let B = {x : the number of a's > the number of b's}. We wish to show I(A, P) ⊆ B.
+#### Regular Language: A language L is _regular_ if L can be built from the symbols of Σ and Ø using the operations union, concatenation, and kleene star (closure). A representation of L in this form is called a regular expression for L.
+* Note (test trick question): {𝜀} is regular because {𝜀} = Ø*
 
-Proof: We will prove this claim by structural induction.
+### Operations on Languages:
 
+* Concatenation (•): Suppose there are two regular languages R and S that are the subset of Σ*, we can define the concatenation of them RS = {rs: r∈R, s∈S}.
+  * Example: Let R = {0, 011} and S = {𝜀, 110}. Then RS = {0, 0110, 011, 011110}.
+  * Note! Concatenation is not always **commmutative** (xy != yx), but it is **associative** ( x(yz) = z(yx) ).
+* Union (∪): Suppose there are two regular languages R and S that are the subset of Σ*, we can define the union of them R + S = { w∈Σ* : w∈R or w∈S}.
+  * Example: Let R = {a, ab} and S = {bc, c}. R + S = {a, ab, bc, c}.
+* Kleene Star / Closure (raised * ): Suppose there is a regular language R that is a subset of Σ*, we can define the kleene star of R as R* = {r1r2 • ... •rn | ri ∈ R where i∈N and where n >= 0}. It is essentially the concatenation of the set R with itself _i_ times. R_i is the set of all strings that can be represented as the concatenation of _i_ strings in R.
+  * Example: {"ab","c"}* = {ε, "ab", "c", "abab", "abc", "cab", "cc", "ababab", "ababc", "abcab", "abcc", "cabab", "cabc", "ccab", "ccc", ...}.
+  * Example: Ø* = {ε}.
+
+#### Examples where Σ = {a, b}:
+* all strings that have suffix babbb
+  * (a + b)* babbb
+* all strings that have substring bbbb
+  * (a + b)* bbbb (a + b)*
+* all strings where the first and last symbols are different
+  * a(a+b)* b + b(a + b)* a
 
 <h1 id="#state-transition">State-Transition Diagrams</h1>
 
