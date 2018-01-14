@@ -123,12 +123,12 @@ Our decision problem is then *"for some x which ∈ of X, is x an element of L"*
 * x = set of all email messages and L = set of all spam emails
 * x = set of graphs and L = set of connected graphs
 
-#### alphabet: denoted ∑, finite non-empty set of elements. Elements are called symbols or characters.
+#### Alphabet: denoted ∑, finite non-empty set of elements. Elements are called symbols or characters.
 Example: ∑ = {a, b}, ∑ = {0, 1}, ∑ = {0, 1, 2, 3}.
 
 #### String: denoted ∑* represents the set of all _finite_ strings over the alphabet ∑. Note: ∑* is an infinite set, but its members are finite.
 
-**empty string**: denoted 𝜀. 𝜀 is a string over any alphabet.
+**Empty String**: denoted 𝜀. 𝜀 is a string over any alphabet.
 **length**: (of a string) number of occurrences of symbols in it.
 
 #### Languages: subsets of ∑* (Language: collection of strings)
@@ -198,7 +198,7 @@ We want languages to be able to model every computational task. We need several 
 
 **So the inductive set can _also_ be defined as the intersection over the _entire_ collection of sets that satisfy closure**
 
-## Regular Expressions and their Operations
+<h2 id="Regular-Expressions-and-their-Operations">Regular Expressions and their Operations.</h2>
 
 Recall: Tasks will always be a decision problem. A decision problem is *"for some x ∈ X, is x an element of L"*? The set of all possible tasks is {L : L ⊆ {a,b}* }. This set is an infinite set of finite strings.
 
@@ -207,16 +207,16 @@ Recall: Tasks will always be a decision problem. A decision problem is *"for som
 
 ### Operations on Languages:
 
-* Concatenation (•): Suppose there are two regular languages R and S that are the subset of Σ*, we can define the concatenation of them RS = {rs: r∈R, s∈S}.
+* **Concatenation (•)**: Suppose there are two regular languages R and S that are the subset of Σ*, we can define the concatenation of them RS = {rs: r∈R, s∈S}.
   * Example: Let R = {0, 011} and S = {𝜀, 110}. Then RS = {0, 0110, 011, 011110}.
   * Note! Concatenation is not always **commmutative** (xy != yx), but it is **associative** ( x(yz) = z(yx) ).
-* Union (∪): Suppose there are two regular languages R and S that are the subset of Σ*, we can define the union of them R + S = { w∈Σ* : w∈R or w∈S}.
+* **Union (∪)**: Suppose there are two regular languages R and S that are the subset of Σ*, we can define the union of them R + S = { w∈Σ* : w∈R or w∈S}.
   * Example: Let R = {a, ab} and S = {bc, c}. R + S = {a, ab, bc, c}.
-* Kleene Star / Closure (raised * ): Suppose there is a regular language R that is a subset of Σ*, we can define the kleene star of R as R* = {r1r2 • ... •rn | ri ∈ R where i∈N and where n >= 0}. It is essentially the concatenation of the set R with itself _i_ times. R_i is the set of all strings that can be represented as the concatenation of _i_ strings in R.
+* **Kleene Star / Closure (raised * )**: Suppose there is a regular language R that is a subset of Σ*, we can define the kleene star of R as R* = {r1r2 • ... •rn : ri ∈ R where i∈N and where n >= 0}. It is essentially the concatenation of the set R with itself _i_ times. R_i is the set of all strings that can be represented as the concatenation of _i_ strings in R.
   * Example: {"ab","c"}* = {ε, "ab", "c", "abab", "abc", "cab", "cc", "ababab", "ababc", "abcab", "abcc", "cabab", "cabc", "ccab", "ccc", ...}.
   * Example: Ø* = {ε}.
 
-#### Examples where Σ = {a, b}:
+#### Examples of Regular Language Operations where Σ = {a, b}:
 * all strings that have suffix babbb
   * (a + b)* babbb
 * all strings that have substring bbbb
