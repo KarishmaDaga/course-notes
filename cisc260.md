@@ -52,6 +52,7 @@ h1 a {
 
 ## Assigned Readings
 * Week 1: Chapters 1-3 of Haskell TB.
+* Week 2: [Chapter 4](chapter-4-260-readings.md)
 
 <hr>
 
@@ -230,8 +231,74 @@ Prelude> max 3.4 5
 Prelude> succ 9 + max 5 4 + 1
 16
 ```
-### Lists
-* In haskell, lists are a _homogenous_ data structure. It stores elements of the same type (like java for arrays)
-*
+
+### Week 2: See readings [here](#chapter-4-260-readings.md)
+
+#### Week 2 Lecture 1, Jan 15 2018
+???
+
+#### Week 2 Lecture 2, Jan 16 2018
+
+##### Numerical Examples:
+* factorial
+* ask if integer is power of 2
+* sumfunc f x y = f(x) + f(x+1) + ... + f(y)
+* ask if an integer is prime
+  * How do we know if something is prime? A number is prime if it cannot be written as the product of values other than itself and 1.
+  * Sieve of Eratosthenes
+* Count number of primes <= N
+* Find the first prime >= N
+* Find the smallest factor of an integer
+
+Note: Higher order function: function that produces other function(s)
+
+```
+-- review type declarations in function definitions
+sumfunc :: (Integer -> Integer) -> Integer -> Integer -> Integer
+sumfunc f low high
+  | low > high = error "lower value is greater than high"
+  | low == high = f low
+  | otherwise = (f low) + sumfunc f (low + 1) high
+
+-- define function here for f in sumfunc
+testFunc x y = x*2
+```
+
+```
+isPrime :: Int -> Bool
+isPrime n = not (hasFactors n 2 (n-1))
+
+hasFactors :: Int -> Int -> Int -> Bool
+hasFactors n low high
+  | mod n low == 0 = True
+  | otherwise = hasFactors n (low + 1) high
+
+-- Looking ahead
+filter isPrime [2...50]
+-- returns list of prime numbers from 2-50
+```
+
+```
+countPrimesLeq :: Integer -> Integer
+countPrimesLeq n
+  | n < 2 = 0
+  | isPrime n = countPrimesLeq (n - 1) +1
+  | otherwise = countPrimesLeq (n - 1)
+```
+
+```
+firstPrimeGeq n
+  | isPrime n = n
+  | otherwise = firstPrimeGeq (n + 1)
+```
+
+```
+-- Find smallest factor of an integer (not including 1)
+smallestFactor n = smallestFactorGeq n 2
+
+smallestFactorGeq n start
+  | mod n start == 0 = start
+  | otherwise = smallestFactorGeq n (start + 1)
+```
 
 <h1 id="prolog">Intro to Prolog</h1>
