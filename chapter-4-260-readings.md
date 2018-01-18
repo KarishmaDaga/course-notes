@@ -1,3 +1,16 @@
+<style>
+h1 a {
+  display: none;
+}
+.container-lg {
+  min-width: 200px;
+  max-width: 880px;
+  padding: 45px;
+}
+</style>
+
+[All Notes](http://karishmadaga.com/course-notes) // [About](http://karishmadaga.com)
+
 # Chapter 4 Readings
 * [4.1: Designing a Program in Haskell](#design)
 * [4.2: Solving a Problem in Steps](#solve)
@@ -57,7 +70,7 @@ We tend to use these only occasionally.
 ### Scopes
 A Haskell script consists of a sequence of definitions. The **scope** of a definition is the part of the program in which the definition can be used. All definitions at the top-level in Haskell have their scope as the whole script they are defined in: that is, they can be used in all the definitions the script contains, even be used in definitions which occur before theirs in the script. Local definitions, given by ```where``` clauses, are not supposed to be visible in the whole script. The same is true of the variables in a function definition.
 
-<h2 id ="enum">4.3: 4.3: Enumerated Types</h2>
+<h2 id ="enum">4.3: Enumerated Types</h2>
 
 ### Data Types of Haskell
 Suppose we want to model rock, paper, scissors in a program.
