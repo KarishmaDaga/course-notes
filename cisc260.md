@@ -232,7 +232,7 @@ Prelude> succ 9 + max 5 4 + 1
 16
 ```
 
-### Week 2: See readings [here](#chapter-4-260-readings.md)
+### Week 2: See readings [here](chapter-4-260-readings.md)
 
 #### Week 2 Lecture 1, Jan 15 2018
 ???
