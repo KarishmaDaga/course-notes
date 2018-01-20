@@ -10,7 +10,7 @@ h1 a {
 }
 </style>
 
-[CISC 221 Notes](cisc221.md) // [All Notes](http://karishmadaga.com/course-notes) // [About](http://karishmadaga.com)
+[All Notes](http://karishmadaga.com/course-notes) // [About](http://karishmadaga.com)
 # CISC 221: Computer Architecture
 
 
