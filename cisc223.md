@@ -242,7 +242,7 @@ Example: the controller for an automatic door. The controller is in either of tw
 
 State (Open, Closed) x Input Signal (Front, Rear, etc)
 
-| NEITHER | FRONT | REAR | BOTH  
+ State | NEITHER | FRONT | REAR | BOTH  
 --- | --- | --- | --- |
 OPEN | CLOSED | OPEN | CLOSED | CLOSED
 CLOSED | CLOSED | OPEN | OPEN | OPEN
