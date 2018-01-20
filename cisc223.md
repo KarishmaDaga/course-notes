@@ -131,14 +131,14 @@ Example: ∑ = {a, b}, ∑ = {0, 1}, ∑ = {0, 1, 2, 3}.
 
 #### String: denoted ∑* represents the set of all _finite_ strings over the alphabet ∑. Note: ∑* is an infinite set, but its members are finite.
 
-**Empty String**: denoted 𝜀. 𝜀 is a string over any alphabet.
+**Empty String**: denoted ε. ε is a string over any alphabet.
 **length**: (of a string) number of occurrences of symbols in it.
 
 #### Languages: subsets of ∑* (Language: collection of strings)
 Example:
 * L = empty set --> empty language (magnitude of L = 0)
-* L = {𝜀} Non-empty language that contains one element.
-* L = {𝜀, 0, 01, 0111}
+* L = {ε} Non-empty language that contains one element.
+* L = {ε, 0, 01, 0111}
 * L = {∑* }
 
 A compiler's task of checking their input (the code of a program) to see if the program is valid (if the code is in the language), can be seen as checking **membership** in such a language.
@@ -150,12 +150,12 @@ A compiler's task of checking their input (the code of a program) to see if the 
 
 
 ### More Terminology:
-* prefix: any intitial part of the string (must include the first symbols)
+* prefix: any initial part of the string (must include the first symbols)
 * suffix: any end part of the string (must include the last symbols)
 * substring: any range of symbols of the string
 
 Example: ∑ = {a, b, c} and S = abac
-prefixes: 𝜀, a, ab, aba, abac
+prefixes: ε, a, ab, aba, abac
 suffixes: c, ac, bac, abac
 substrings: all of the prefixes, suffixes, and _ba_ and _b_
 
@@ -192,7 +192,7 @@ We want languages to be able to model every computational task. We need several 
 2. we get 'baa' after applying P_3(a,a)
 3. 'abbaa' after applying P_4(a, baa)
 
-*Is 𝜀 ∈ I(A, P)?*
+*Is ε ∈ I(A, P)?*
 - NO.
   - Each operation in P increases length (simple reasoning)
   - This is more difficult than proving membership
@@ -206,12 +206,12 @@ We want languages to be able to model every computational task. We need several 
 Recall: Tasks will always be a decision problem. A decision problem is *"for some x ∈ X, is x an element of L"*? The set of all possible tasks is {L : L ⊆ {a,b}* }. This set is an infinite set of finite strings.
 
 #### Regular Language: A language L is _regular_ if L can be built from the symbols of Σ and Ø using the operations union, concatenation, and kleene star (closure). A representation of L in this form is called a regular expression for L.
-* Note (test trick question): {𝜀} is regular because {𝜀} = Ø*
+* Note (test trick question): {ε} is regular because {ε} = Ø*
 
 ### Operations on Languages:
 
 * **Concatenation (•)**: Suppose there are two regular languages R and S that are the subset of Σ*, we can define the concatenation of them RS = {rs: r∈R, s∈S}.
-  * Example: Let R = {0, 011} and S = {𝜀, 110}. Then RS = {0, 0110, 011, 011110}.
+  * Example: Let R = {0, 011} and S = {ε, 110}. Then RS = {0, 0110, 011, 011110}.
   * Note! Concatenation is not always **commmutative** (xy != yx), but it is **associative** ( x(yz) = z(yx) ).
 * **Union (∪)**: Suppose there are two regular languages R and S that are the subset of Σ*, we can define the union of them R + S = { w∈Σ* : w∈R or w∈S}.
   * Example: Let R = {a, ab} and S = {bc, c}. R + S = {a, ab, bc, c}.
@@ -274,20 +274,20 @@ Nondeterminism is a generalization of determinism, so every DFA is automatically
 
 Differences between DFAs and NFAs:
 * Every state of a DFA always has exactly one transition arrow for each symbol in the alphabet. In an NFA, a state may have zero, one, or many exiting arrows for each alphabet symbol.
-* In a DFA, inputs are elements from the alphabet. NFA may have inputs that are elements from the alphabet _and_ 𝜀. Zero, one, or many arrows may exit from each  state with the label 𝜀.
+* In a DFA, inputs are elements from the alphabet. NFA may have inputs that are elements from the alphabet _and_ . Zero, one, or many arrows may exit from each  state with the label .
 
 #### So how does an NFA compute?
-An NFA kinda works like a parallel computation, where there are multiple independent processes that run concurrently. Suppose we're running an NFA on an input string and we come to a state with multiple ways to proceed. The machine splits into multiple copies of itself and follows _all_ the possibilities in parallel. Each copy of the machine takes one of the possible ways to proceed and continues as before. If there are subsequent choices, the machine splits again. If the next input symbol doesn't appear on any of the arrows exiting the state occupied by a copy of the machine, the copy of the machine dies, along with the branch of the computation associated with it. Finally, if _any one_ of these copies of the machine is in an accept state at the end of the input, the NFA accepts the input string. If 𝜀 is on an arrow, without reading the input, the machine splits into multiple copies and proceeds nondeterministically as before.
+An NFA kinda works like a parallel computation, where there are multiple independent processes that run concurrently. Suppose we're running an NFA on an input string and we come to a state with multiple ways to proceed. The machine splits into multiple copies of itself and follows _all_ the possibilities in parallel. Each copy of the machine takes one of the possible ways to proceed and continues as before. If there are subsequent choices, the machine splits again. If the next input symbol doesn't appear on any of the arrows exiting the state occupied by a copy of the machine, the copy of the machine dies, along with the branch of the computation associated with it. Finally, if _any one_ of these copies of the machine is in an accept state at the end of the input, the NFA accepts the input string. If  is on an arrow, without reading the input, the machine splits into multiple copies and proceeds nondeterministically as before.
 
 You can also think of nondeterminism as a tree of possibilities.
 
 ### Formal Definition of a NFA
-Similar to that of a DFA, except for the transition function. In a NFA, the transition function takes a state and an input symbol _or the empty string_ and produces _the set of possible next states_. For any set Q we write P(Q) to be the collection of all subsets of Q. Here, P(Q) is the **power set** of Q. We also define for any alphabet Σ, **Σ_𝜀 = ΣU{𝜀}**.
+Similar to that of a DFA, except for the transition function. In a NFA, the transition function takes a state and an input symbol _or the empty string_ and produces _the set of possible next states_. For any set Q we write P(Q) to be the collection of all subsets of Q. Here, P(Q) is the **power set** of Q. We also define for any alphabet Σ, **Σ_ε = ΣU{ε}**.
 
 **A nondeterministic finite automaton is a five tuple (Q, Σ, δ, q_o, F) where:**
 1. Q is a finite set called the _states_
 2. Σ is a finite set called the _alphabet_
-3. δ: Q x Σ_𝜀 --> P(Q) is the _transition function_, which defines the rules for moving.
+3. δ: Q x Σ_ε --> P(Q) is the _transition function_, which defines the rules for moving.
 4. q_o ∈ Q is the _start state_
 5. F ⊆ Q is the _set of accept states_
 
