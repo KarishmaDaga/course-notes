@@ -44,6 +44,7 @@ Abstraction is the process of removing or hiding irrelevant details.  Everything
 Since there can be k places and 2 choices for each, there are 2^k combinations.
 
 # Chapter 2 Readings
+# CISC 221: Week 2 Readings
 Since the structure of the course is flipped, a majority of the learning is through readings. Chapter 2 covers data representation.
 See the notes [here](cisc221week2r.md) or below:
 
@@ -188,9 +189,75 @@ The corresponding right shift operation ```x >> k``` has a slightly subtle behav
 
 For unsigned data, right shifts must be logical. However, for unsigned data, it could be either arithmetic or logical. In practice, almost all compiler/machine combinations use arithmetic right shifts for signed data. Java is specific. ```x >> k``` shifts x **arithmetically** by k positions and ```x >>> k``` shifts x **logically** by k positions.
 
-
 ## 2.2 Integer Representations
+In 2.2, we describe two different ways bits can be used to encode integers. Unsigned can only represent nonnegative numbers and Signed can represent the entire set of integers.
 
+Typical ranges for C integral data types on a 32-bit machine
+C Data Type | Minimum | Maximum
+--- | --- | --- | --- |
+char | -128 | 127
+unsigned char | 0 | 255
+short [int] | -32768 | 32767
+unsigned short [int] | 0 | 65535
+int | −2,147,483,648 | 2,147,483,647
+unsigned [int] | 0 | 4,294,967,295
+long [int] | −2,147,483,648 | 2,147,483,647
+unsigned long [int] | 0 | 4,294,967,295
+long long [int] | -9,223,372,036,854,775,808 | 9,223,372,036,854,775,807
+unsigned long long [int] | 0 | 18,446,744,073,709,551,615
+
+### 2.2.1 Integral Data Types
+C supports a variety of integral data types - ones that represent finite ranges of integers.
+
+The number of bytes allocated for the different sizes vary according the machine's word size and the compiler. Most 64-bit machines use an 8-byte representation compared to the 4-byte representation on 32-bit machines. Note: the range of negative numbers extend one further than the range of the positive numbers.
+
+### 2.2.2 Unsigned Encodings
+
+
+### 2.2.3 Two's Complement Encodings
+* Two's complement is the most common representation to represent the entire set of integers (so it includes negative values)
+
+### 2.2.4 Conventions between Signed and Unsigned
+* covers casting rules
+
+### 2.2.5 Signed vs Unsigned in C
+
+### 2.2.6 Expanding the Bit Representation of a Number
+
+### 2.2.7 Truncating Numbers
+
+### 2.2.8 Advice on Signed vs Unsigned
+
+
+## 2.3 Integer Arithmetic
+
+### 2.3.1 Unsigned Addition
+
+### 2.3.2 Two's Complement Addition
+
+### 2.3.3 Two's Complement Negation
+
+### 2.3.4 Unsigned Multiplication
+
+### 2.3.5 Two's Complement Multiplication
+
+### 2.3.6 Multiplying by Constants
+
+### 2.3.7 Dividing by Powers of 2
+
+## 2.4 Floating Point
+
+### 2.4.1 Fractional Binary Numbers
+
+### 2.4.2 IEEE Floating-Point Representation
+
+### 2.4.3 Example Numbers
+
+### 2.4.4 Rounding
+
+### 2.4.5 Floating-Point Operations
+
+### 2.4.6 Floating Point in C
 
 <h1 id="#machine-level-rep">Machine-Level Representation of Programs</h1>
 
