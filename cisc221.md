@@ -43,8 +43,7 @@ h1 a {
 Abstraction is the process of removing or hiding irrelevant details.  Everything is just a sequence of bits (binary digits).  There are two possible values for a bit, and those values can have arbitrary labels such as up/down, left/right, 0/1, on/off, pass/fail.
 Since there can be k places and 2 choices for each, there are 2^k combinations.
 
-# Chapter 2 Readings
-# CISC 221: Week 2 Readings
+# CISC 221: Data Representations Readings
 Since the structure of the course is flipped, a majority of the learning is through readings. Chapter 2 covers data representation.
 See the notes [here](cisc221week2r.md) or below:
 
@@ -193,8 +192,9 @@ For unsigned data, right shifts must be logical. However, for unsigned data, it 
 In 2.2, we describe two different ways bits can be used to encode integers. Unsigned can only represent nonnegative numbers and Signed can represent the entire set of integers.
 
 Typical ranges for C integral data types on a 32-bit machine
+
 C Data Type | Minimum | Maximum
---- | --- | --- | --- |
+--- | --- | --- |
 char | -128 | 127
 unsigned char | 0 | 255
 short [int] | -32768 | 32767

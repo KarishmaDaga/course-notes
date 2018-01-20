@@ -10,7 +10,8 @@ h1 a {
 </style>
 
 [All Notes](http://karishmadaga.com/course-notes) // [About](http://karishmadaga.com)
-# CISC 221: Week 2 Readings
+
+# CISC 221: Data Representations Readings
 Since the structure of the course is flipped, a majority of the learning is through readings. Chapter 2 covers data representation.
 See the notes [here](cisc221week2r.md) or below:
 
@@ -159,8 +160,9 @@ For unsigned data, right shifts must be logical. However, for unsigned data, it 
 In 2.2, we describe two different ways bits can be used to encode integers. Unsigned can only represent nonnegative numbers and Signed can represent the entire set of integers.
 
 Typical ranges for C integral data types on a 32-bit machine
+
 C Data Type | Minimum | Maximum
---- | --- | --- | --- |
+--- | --- | --- |
 char | -128 | 127
 unsigned char | 0 | 255
 short [int] | -32768 | 32767
