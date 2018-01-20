@@ -44,7 +44,7 @@ Abstraction is the process of removing or hiding irrelevant details.  Everything
 Since there can be k places and 2 choices for each, there are 2^k combinations.
 
 # Chapter 2 Readings
-Since the structure of the course is flipped, a majority of the learning is through readings. Chapter covers data representation.
+Since the structure of the course is flipped, a majority of the learning is through readings. Chapter 2 covers data representation.
 See the notes [here](cisc221week2r.md) or below:
 
 ### Data Representation
@@ -115,10 +115,10 @@ Example: 314156
 
 4 = 16 (0) + **4** --> **4**
 
-Therefore, 315156 is 0x4CB2C
+Therefore, 315156 is ```0x4CB2C```
 
 #### Hexadecimal to Decimal
-Ex: 0x7AF
+Ex: ```0x7AF```
 
 Compute by multiplying each hexadecimal by the appropriate power of 16.
 
@@ -158,25 +158,25 @@ C Expression | Binary Expression | Binary Result | Hexadecimal Result
 0x69 & 0x55 | [0110 1001] & [0101 0101] | ... | 0x41
 0x69/0x55 | [0110 1001]/[0101 0101] | ... | 0x7D
 
-*Note: the / is meant to be a bitwise OR, but markdown separates strings into separate cell when there is a '|'.*
+Note: the / is meant to be a bitwise OR, but markdown separates strings into separate cell when there is a '|'.
 
 #### Masking Operations
 Bit pattern that indicates a selected set of bits within a word.
 
-Example: 0xFF (having ones for the least significant bits) indicates the low order byte of a word.
+Example: ```0xFF``` (having ones for the least significant bits) indicates the low order byte of a word.
 
-Bit level operation: x & 0xFF --> Returns the value consisting of the least significant byte of x, but with all other bytes set to 0.
+Bit level operation: ```x & 0xFF``` --> Returns the value consisting of the least significant byte of x, but with all other bytes set to 0.
 
-Example: let int x = 0x089ABCDEF. x & 0xFF --> 0x000000EF
+Example: let int x = 0x089ABCDEF. ```x & 0xFF``` --> ```0x000000EF```
 
-Example: ~0 (bitwise not)-> mask of _all_ the ones, regardless of the word size.
+Example: ```~0 ```(bitwise not)-> mask of _all_ the ones, regardless of the word size.
 
 ### 2.1.9 Logical Operators in C
-* Logical Operators: || (logical OR), && (logical AND), and ! (logical NOT)
+* Logical Operators: ```||``` (logical OR), ```&&``` (logical AND), and ```!``` (logical NOT)
 * Treat any nonzero argument representing TRUE and argument 0 as representing FALSE. 1 -> T and 0 -> F.
 * Logical operators (compared to their bitwise counterparts) do not evaluate their second argument if the result of the expression can be determined by evaluating the first argument
-  * Example: a && 5/a will never cause division by 0
-  * Example: p && * p++ will never cause dereferencing of a null pointer
+  * Example: ```a && 5/a``` will never cause division by 0
+  * Example: ```p && * p++``` will never cause dereferencing of a null pointer
 
 ### 2.1.10 Shift Operations in C
 C also provides a set of shift operations for shifting bit patterns to the left and to the right. For an operand x having a bit representation [X_n-1, X_n-2, ..., X_o], the C expression ```x << k``` yields a value with bit representation [X_n-k-1, X_n-k-2, ..., X_o, 0,...,0]. X is shifted _k_ bits to the left, dropping off the k most significant bits and filling the right end with _k_ zeroes. The shift amount should be between 0 and n-1. Shift operations associate from left to right, so x << j << k  = (x << j) << k.
