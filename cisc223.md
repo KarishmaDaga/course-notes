@@ -31,7 +31,10 @@ h1 a {
 * [Unimplementable Specifications](#more-verification)
 * [Loop Invariants and other topics](#loop-invariants)
 
-## Extra Reading
+## Extra Reading and Textbook Resources
+
+* [Introduction to the Theory of Computation, aka BAE 💖](http://fuuu.be/polytech/INFOF408/Introduction-To-The-Theory-Of-Computation-Michael-Sipser.pdf)
+* [MIT OCW lecture notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-045j-automata-computability-and-complexity-spring-2011/lecture-notes/)
 * [Parsing and Lexical Analysis - Vaidehi Joshi](https://medium.com/basecs/reading-code-right-with-some-help-from-the-lexer-63d0be3d21d)
 * [Parsing and Abstract Syntax Trees - Vaidehi Joshi](https://medium.com/basecs/leveling-up-ones-parsing-game-with-asts-d7a6fc2400ff)
 * [A Deeper Inspection Into Compilation And Interpretation - Vaidehi Joshi](https://medium.com/basecs/a-deeper-inspection-into-compilation-and-interpretation-d98952ebc842)
@@ -223,6 +226,43 @@ Recall: Tasks will always be a decision problem. A decision problem is *"for som
   * (a + b)* bbbb (a + b)*
 * all strings where the first and last symbols are different
   * a(a+b)* b + b(a + b)* a
+
+# Finite Automata
+* computational model: idealized models of computers that we use to build a manageable mathematical theory of them directly
+* the simplest model is called the **finite state machine or finite automata**.
+* finite automata are good models for computers with an extremely limited amount of memory
+
+Example: the controller for an automatic door. The controller is in either of two states: "OPEN" or "CLOSED", representing the corresponding condition of the door. There are four possible input conditions:
+  * "FRONT" (person is standing in front of the door)
+  * "REAR" (person is standing to the rear of the door)
+  * "BOTH" (people are standing both in front and rear to the doors)
+  * "NEITHER"(no one is standing in front or at the rear of the door)
+    ![finte-automata-example](finite-automata-example.jpeg)
+
+
+State (Open, Closed) x Input Signal (Front, Rear, etc)
+
+| NEITHER | FRONT | REAR | BOTH  
+--- | --- | --- | --- |
+OPEN | CLOSED | OPEN | CLOSED | CLOSED
+CLOSED | CLOSED | OPEN | OPEN | OPEN
+
+The controller moves from state to state, depending on the input it receives.
+
+## Formal Definition of Finite Automata
+
+* A finite automaton is essentially a
+
+
+
+
+
+
+
+
+
+
+
 
 <h1 id="#state-transition">State-Transition Diagrams</h1>
 
