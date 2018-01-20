@@ -251,17 +251,49 @@ The controller moves from state to state, depending on the input it receives.
 
 ## Formal Definition of Finite Automata
 
-* A finite automaton is essentially a
+* A finite automaton is 5-tuple (a list of 5 elements) which consists of states and rules for an FA.
+
+#### A finite automaton is a 5-tuple (Q, Σ, δ, q_o, F) where:
+1. Q is a finite set called the _states_
+2. Σ is a finite set called the _alphabet_
+3. δ: Q x Σ --> Q is the _transition function_, which defines the rules for moving.
+4. q_o ∈ Q is the _start state_
+5. F ⊆ Q is the _set of accept states_
+
+We can then use the formal definition of FAs to define the following example:
+![finite example](fa-ex1.jpeg)
+
+We can then say that A is the set of all strings that machine M accepts and that A is the language of the machine, L(M) = A. A language is called a **regular language** if some finite automaton recognizes/accepts it.
+
+## Nondeterminism
+
+#### Deterministic: when the machine is in a given state and reads the next input symbol, we know what the next state will be
+#### Nondeterministic: several choices may exist for the next state at any point
+
+Nondeterminism is a generalization of determinism, so every DFA is automatically an NFA.
+
+Differences between DFAs and NFAs:
+* Every state of a DFA always has exactly one transition arrow for each symbol in the alphabet. In an NFA, a state may have zero, one, or many exiting arrows for each alphabet symbol.
+* In a DFA, inputs are elements from the alphabet. NFA may have inputs that are elements from the alphabet _and_ 𝜀. Zero, one, or many arrows may exit from each  state with the label 𝜀.
+
+#### So how does an NFA compute?
+An NFA kinda works like a parallel computation, where there are multiple independent processes that run concurrently. Suppose we're running an NFA on an input string and we come to a state with multiple ways to proceed. The machine splits into multiple copies of itself and follows _all_ the possibilities in parallel. Each copy of the machine takes one of the possible ways to proceed and continues as before. If there are subsequent choices, the machine splits again. If the next input symbol doesn't appear on any of the arrows exiting the state occupied by a copy of the machine, the copy of the machine dies, along with the branch of the computation associated with it. Finally, if _any one_ of these copies of the machine is in an accept state at the end of the input, the NFA accepts the input string. If 𝜀 is on an arrow, without reading the input, the machine splits into multiple copies and proceeds nondeterministically as before.
+
+You can also think of nondeterminism as a tree of possibilities.
+
+### Formal Definition of a NFA
+Similar to that of a DFA, except for the transition function. In a NFA, the transition function takes a state and an input symbol _or the empty string_ and produces _the set of possible next states_. For any set Q we write P(Q) to be the collection of all subsets of Q. Here, P(Q) is the **power set** of Q. We also define for any alphabet Σ, **Σ_𝜀 = ΣU{𝜀}**.
+
+**A nondeterministic finite automaton is a five tuple (Q, Σ, δ, q_o, F) where:**
+1. Q is a finite set called the _states_
+2. Σ is a finite set called the _alphabet_
+3. δ: Q x Σ_𝜀 --> P(Q) is the _transition function_, which defines the rules for moving.
+4. q_o ∈ Q is the _start state_
+5. F ⊆ Q is the _set of accept states_
 
 
-
-
-
-
-
-
-
-
+Example NFA:
+![nfa-example](nfa-example-1.jpeg)
 
 
 <h1 id="#state-transition">State-Transition Diagrams</h1>
