@@ -8,7 +8,7 @@ h1 a {
   padding: 45px;
 }
 </style>
-
+[CISC 260 Notes](cisc260.md) //
 [All Notes](http://karishmadaga.com/course-notes) // [About](http://karishmadaga.com)
 
 # Chapter 4 Readings
