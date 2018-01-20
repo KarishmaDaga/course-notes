@@ -19,7 +19,7 @@ Hi! These are my notes for various undergrad computer science and mathematics co
 ### Winter 2018
 * [CISC 235: Data Structures](cisc235.md)
 * [CISC 221: Computer Architecture](cisc221.md)
-* [CISC 223: Software Specifications](cisc223.md)
+* [CISC 223: Introduction to the Theory of Computation](cisc223.md)
 * [CISC 260: Programming Paradigms](cisc260.md)
 * [STAT 269: Statistics](stat269.md)
 * [MATH 210: Rings and Fields](math210.md)
