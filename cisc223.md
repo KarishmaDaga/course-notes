@@ -14,13 +14,13 @@ h1 a {
 
 ## Topics
 
-* [Alphabets, Strings, and Languages](#alph-str-lang)
-  * [Halting Problem](#halting)
-  * [Classification of Computing Problems](#classification)
-  * [Modelling Decision Problems](#modelling)
-  * [Inductive Definition of Sets and Structural Induction](#induction)
-  * [Regular Expressions and their Operations](#Regular-Expressions-and-their-Operations)
-* [State-Transition Diagrams](#alph-str-lang)
+* [Halting Problem](#halting)
+* [Classification of Computing Problems](#classification)
+* [Modelling Decision Problems: Alphabets, Strings, and Languages](#modelling)
+* [Inductive Definition of Sets and Structural Induction](#induction)
+* [Regular Expressions and their Operations](#Regular-Expressions-and-their-Operations)
+* [Finite Automata](#finite)
+  * [DFAs and NFAs](#determinism)
 * [Regular Expressions vs State Diagrams](#reg-exp)
 * [Minimizing State Transition Diagrams, Nonregular Languages](#min-state-trans-diagrams)
 * [Context-free Languages](#context-free-lang)
@@ -33,15 +33,10 @@ h1 a {
 
 ## Extra Reading and Textbook Resources
 
-* [Introduction to the Theory of Computation, aka BAE 💖](http://fuuu.be/polytech/INFOF408/Introduction-To-The-Theory-Of-Computation-Michael-Sipser.pdf)
+* [Introduction to the Theory of Computation, aka BAE TB 💖](http://fuuu.be/polytech/INFOF408/Introduction-To-The-Theory-Of-Computation-Michael-Sipser.pdf)
 * [MIT OCW lecture notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-045j-automata-computability-and-complexity-spring-2011/lecture-notes/)
-* [Parsing and Lexical Analysis - Vaidehi Joshi](https://medium.com/basecs/reading-code-right-with-some-help-from-the-lexer-63d0be3d21d)
-* [Parsing and Abstract Syntax Trees - Vaidehi Joshi](https://medium.com/basecs/leveling-up-ones-parsing-game-with-asts-d7a6fc2400ff)
-* [A Deeper Inspection Into Compilation And Interpretation - Vaidehi Joshi](https://medium.com/basecs/a-deeper-inspection-into-compilation-and-interpretation-d98952ebc842)
-* [Grammatically Rooting Oneself With Parse Trees - Vaidehi Joshi](https://medium.com/basecs/grammatically-rooting-oneself-with-parse-trees-ec9daeda7dad)
-* [see more at basecs](https://medium.com/basecs)
+* [Inspo to Keep Studying: Real Life Applications](https://luckytoilet.wordpress.com/2018/01/01/real-world-applications-of-automaton-theory/)
 <hr>
-<h1 id="#alph-str-lang">Alphabets, Strings, and Languages</h1>
 
 #### What do computers do?
 They solve **decision problems**.
@@ -227,7 +222,8 @@ Recall: Tasks will always be a decision problem. A decision problem is *"for som
 * all strings where the first and last symbols are different
   * a(a+b)* b + b(a + b)* a
 
-# Finite Automata
+<h1 id="finite">Finite Automata</h1>
+
 * computational model: idealized models of computers that we use to build a manageable mathematical theory of them directly
 * the simplest model is called the **finite state machine or finite automata**.
 * finite automata are good models for computers with an extremely limited amount of memory
@@ -265,7 +261,7 @@ We can then use the formal definition of FAs to define the following example:
 
 We can then say that A is the set of all strings that machine M accepts and that A is the language of the machine, L(M) = A. A language is called a **regular language** if some finite automaton recognizes/accepts it.
 
-## Nondeterminism
+<h2 id="determinism">Nondeterminism</h2>
 
 #### Deterministic: when the machine is in a given state and reads the next input symbol, we know what the next state will be
 #### Nondeterministic: several choices may exist for the next state at any point
@@ -295,7 +291,7 @@ Similar to that of a DFA, except for the transition function. In a NFA, the tran
 Example NFA:
 ![nfa-example](nfa-example-1.jpeg)
 
-
+## TODO: Converting a NFA to a DFA
 <h1 id="#state-transition">State-Transition Diagrams</h1>
 
 <h1 id="#reg-exp">Regular Expressions vs State Diagrams</h1>
