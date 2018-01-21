@@ -270,7 +270,7 @@ Nondeterminism is a generalization of determinism, so every DFA is automatically
 
 Differences between DFAs and NFAs:
 * Every state of a DFA always has exactly one transition arrow for each symbol in the alphabet. In an NFA, a state may have zero, one, or many exiting arrows for each alphabet symbol.
-* In a DFA, inputs are elements from the alphabet. NFA may have inputs that are elements from the alphabet _and_ . Zero, one, or many arrows may exit from each  state with the label .
+* In a DFA, inputs are elements from the alphabet. NFA may have inputs that are elements from the alphabet _and_ ε . Zero, one, or many arrows may exit from each state with the label ε.
 
 #### So how does an NFA compute?
 An NFA kinda works like a parallel computation, where there are multiple independent processes that run concurrently. Suppose we're running an NFA on an input string and we come to a state with multiple ways to proceed. The machine splits into multiple copies of itself and follows _all_ the possibilities in parallel. Each copy of the machine takes one of the possible ways to proceed and continues as before. If there are subsequent choices, the machine splits again. If the next input symbol doesn't appear on any of the arrows exiting the state occupied by a copy of the machine, the copy of the machine dies, along with the branch of the computation associated with it. Finally, if _any one_ of these copies of the machine is in an accept state at the end of the input, the NFA accepts the input string. If ε is on an arrow, without reading the input, the machine splits into multiple copies and proceeds nondeterministically as before.
