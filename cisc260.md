@@ -374,10 +374,11 @@ challenge x n
     - ```challenge (5) (1)
 ```
 
-#### Week 3 Lecture 2 Jan 23, 2018
-Reading: Chapters 5 and 7, skip parts referring to algebraic types.
-
 ## Lists
+
+#### Week 3 Lecture 2 Jan 23, 2018
+##### Reading: [Chapters 5 and 7](260-ch5-7.md), skip parts referring to algebraic types.
+
 - homogeneous data structure (everything contained in a list is of the same type)
 - lists are immutable (all values in functional Haskell are immutable)
 - lists of same type may vary in size
