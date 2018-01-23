@@ -408,11 +408,11 @@ Reading: Chapters 5 and 7, skip parts referring to algebraic types.
 - Operator ```:``` constructs a list from a head and tail. Pronounced "cons" for _construct_.
   - ```1 : [2, 3]``` is equal to ```[1, 2, 3]```
 - Shortcuts for lists of numbers:
-  - [2..7] =[2,3,4,5,6,7]
-  - [3,5..17] = [3,5,7,9,11,13,15,17]
-  - [7,6..1] = [7,6,5,4,3,2,1]
-  - [5..2] = []
-  - [5,6..4] = []
+  - ```[2..7] =[2,3,4,5,6,7]```
+  - ```[3,5..17] = [3,5,7,9,11,13,15,17]```
+  - ```[7,6..1] = [7,6,5,4,3,2,1]```
+  - ```[5..2] = []```
+  - ```[5,6..4] = []```
 
 
 ### Two techniques for dealing with lists
@@ -422,7 +422,7 @@ Reading: Chapters 5 and 7, skip parts referring to algebraic types.
 ### List Comprehensions
 - A way to create new lists based on other ones, like mathematical set notation.
 - Example: set of all even numbers:
-  - [x + 1|x<-[1,2,3,4]]
+  - ```[x + 1|x<-[1,2,3,4]]```
 
 ### Prelude Functions and Operators
 
@@ -435,4 +435,4 @@ Reading: Chapters 5 and 7, skip parts referring to algebraic types.
 
 ### Improved Error Messages
 
-### Pattern Matching 
+### Pattern Matching
