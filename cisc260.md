@@ -235,7 +235,7 @@ Prelude> succ 9 + max 5 4 + 1
 ### Week 2: See readings [here](chapter-4-260-readings.md)
 
 #### Week 2 Lecture 1, Jan 15 2018
-???
+??? See lecture slides I guess and add em here
 
 #### Week 2 Lecture 2, Jan 16 2018
 
@@ -301,4 +301,138 @@ smallestFactorGeq n start
   | otherwise = smallestFactorGeq n (start + 1)
 ```
 
-<h1 id="prolog">Intro to Prolog</h1>
+#### Week 2 Lecture 3 Missing -> Do Lecture notes on video
+
+#### Week 3 Lecture 1 Jan 22, 2018
+Example of a higher-order function:
+```
+-- @params: f is a function, low is a lower bound, and
+-- high is an upper bound
+
+square n = n*n
+sumFunc1 f low high
+  | low > high = 0
+  | otherwise = f low + sumFunc1 f (low + 1) high
+```
+Types of recursion (read up on these different types and do practice problems):
+- simple recursion
+- tail recursion
+- multiple recursion
+
+```
+sumFunc2 f low high ...
+```
+
+```
+sumFunc3 f low high
+  | low > high = 0
+  | low == high = f low
+  | otherwise = sumFunc3 f low mid + sumFunc3 f (mid + 1) high
+  where
+  mid = div (low + high)
+```
+
+Question: What does this function do?
+```
+puzzle :: Int -> Int -> Int
+puzzle x n
+  | n == 0 = 1
+  | n == 1 = x*n
+  | x < 2 = x*n       -- case for when n == 2
+  | n > x = (puzzle (2*x) (n-x)) + 7
+  | otherwise = 3 * (puzzle (n+x) (n-1))
+```
+What kind of recursion is this, and what is the value of ```puzzle 2 5```?
+- n > x since 5 > 2, so:
+  - ```puzzle (4) (3)  + 7```
+  - 3 is not greater than 4, so ```[3 * puzzle (7) (2)] + 7```
+    - ```(3 * (3 * puzzle (9) (1))) + 7```
+    - ```(9 * puzzle (9) (1)) + 7```
+      - ...
+
+
+What kind of recursion is this, and what is the value of ```challenge 2 4```?
+
+```
+challenge :: Int -> Int -> Int
+challenge x n
+  | n == 0 = 1
+  | n == 1 = x
+  | x < 2 = x*n
+  | n > x = challenge (2*x) (n-x) + challenge (x + 1) (n - x)
+  | otherwise = challenge (n + x) (n - 1) + challenge (x + 1) (n - 1)
+```
+- ```challenge 2 4``` and 4 > 2, so:
+  - ```challenge (2*2) (4-2) + challenge (2+1) (4-2)```
+  - ```challenge (4) (2) + challenge (3) (2)```
+    - ```challenge (4) (2)```
+      - ```challenge (4 + 2) (2 - 1) + challenge (4 + 1) (2 - 1)```
+      - ```challenge (6) (1) + challenge (5) (1)```
+        - ```challenge (6) (1)``` = 6*1 = 6
+        - ```challenge (5) (1)``` = 5*1 = 5
+  - ```challenge (3) (2)```:
+    - ```challenge (5) (1)
+```
+
+#### Week 3 Lecture 2 Jan 23, 2018
+Reading: Chapters 5 and 7, skip parts referring to algebraic types.
+
+## Lists
+- homogeneous data structure (everything contained in a list is of the same type)
+- lists are immutable (all values in functional Haskell are immutable)
+- lists of same type may vary in size
+- compare to python lists or java arraylist
+
+### Naming Types
+- Use type keyword to give "nicknames" to types.
+  - type ID = Int
+  - type Height = Float
+  - type Vector = (int, int)
+  - type String = [Char]. Strings are lists of characters.
+
+### Recursive View of Lists
+- a list has one of two forms:
+  - the special value [] (empty)
+  - A list element (the _head_) and a list containing the remaining elements (the _tail_)
+    - Example: A list of integers: ```[42, 37, 15, 8]``` can also be expressed as:
+      - head: ```42```, and the
+      - tail: ```[37, 15, 8]```
+- Lists are not arrays! think of them as linked lists
+
+### Basic List Operations
+- Two functions to extract parts of lists:
+  - head: return head of list.
+    - ```head [1, 2, 3] = 1```
+  - tail: return tail of list
+    - ```tail [1, 2, 3] = [2, 3]```
+- Operator ```:``` constructs a list from a head and tail. Pronounced "cons" for _construct_.
+  - ```1 : [2, 3]``` is equal to ```[1, 2, 3]```
+- Shortcuts for lists of numbers:
+  - [2..7] =[2,3,4,5,6,7]
+  - [3,5..17] = [3,5,7,9,11,13,15,17]
+  - [7,6..1] = [7,6,5,4,3,2,1]
+  - [5..2] = []
+  - [5,6..4] = []
+
+
+### Two techniques for dealing with lists
+1. Use library functions and operators
+2. Use recursion with basic operations (head, tail, cons)
+
+### List Comprehensions
+- A way to create new lists based on other ones, like mathematical set notation.
+- Example: set of all even numbers:
+  - [x + 1|x<-[1,2,3,4]]
+
+### Prelude Functions and Operators
+
+
+### More Useful Functions
+
+### List Operators
+
+### Converting to and from Strings
+
+### Improved Error Messages
+
+### Pattern Matching 
