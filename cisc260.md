@@ -401,21 +401,43 @@ challenge x n
 - Lists are not arrays! think of them as linked lists
 
 ### Basic List Operations
-- Two functions to extract parts of lists:
-  - head: return head of list.
+- Some functions to extract parts of lists:
+  - ```head```: Takes a list and returns its head (first element).
     - ```head [1, 2, 3] = 1```
-  - tail: return tail of list
+  - ```tail```: Takes a list and returns its tail (chops off first element)
     - ```tail [1, 2, 3] = [2, 3]```
-- Operator ```:``` constructs a list from a head and tail. Pronounced "cons" for _construct_.
+  - ```last```: takes a list and returns its last element
+  - ```init```: takes a list and returns everything except its last element
+  - ```length```: gets length of list
+  - ```null```: checks if a list is empty. If it is, it returns ```True```, otherwise it returns ```False```.
+  - ```reverse```: reverses a list
+  - ```take```: takes a number n and a list. It extracts n elements from the beginning of the list.
+  - ```drop```: works in a similar way, but it removes the first n elements and returns the new list.
+  - ```minimum```: returns smallest in list
+  - ```maximum```: returns largest in list
+  - ```sum```: takes a list of numbers and returns their sum
+  - ```product```: takes a list of numbers and returns their product
+  - ```elem```: takes a number and a list and tells us if the num is an element of the list.
+    - ``` 4 `elem` [2, 3, 4, 6]```
+  - ```cycle```: takes a list and cycles it into an infinite list. This will go on forever, so you should slice it off somewhere using ```take```.
+- Operator ```:``` constructs a list from a head and tail. Pronounced "cons" for _construct_. This is great for concatenating large lists.
   - ```1 : [2, 3]``` is equal to ```[1, 2, 3]```
-- Shortcuts for lists of numbers:
+  - ```'A':" SMALL CAT"``` yields ```"A SMALL CAT"```
+- Texas Ranges: shortcuts for lists of numbers:
   - ```[2..7] =[2,3,4,5,6,7]```
   - ```[3,5..17] = [3,5,7,9,11,13,15,17]```
   - ```[7,6..1] = [7,6,5,4,3,2,1]```
   - ```[5..2] = []```
   - ```[5,6..4] = []```
-
-
+- Concatenating Lists:
+  - ```[1, 2, 3, 4] ++ [9, 10, 11, 12]``` yields ```[1, 2, 3, 4, 9, 10, 11, 12]```
+  - ```"hello" ++ " " ++ "world"``` yields ```"hello world"```
+  - The ```++``` operator is fine to use on small lists, but concatenating very large lists will take a long time since Haskell has to walk through the whole list on the left side of ```++```
+- Getting an element out of a list by index, ```!!```:
+  - ```"Steve Buscemi" !! 6 ``` yields ```'B'```  
+  - ```[9.4,33.2,96.2,11.2,23.25] !! 1 ``` yields ```33.2```
+- Comparing Lists: Lists can be compared if their contents can be compared (<, <=, >, >=).
+    -
 ### Two techniques for dealing with lists
 1. Use library functions and operators
 2. Use recursion with basic operations (head, tail, cons)
@@ -424,7 +446,15 @@ challenge x n
 - A way to create new lists based on other ones, like mathematical set notation.
 - Example: set of all even numbers:
   - ```[x + 1|x<-[1,2,3,4]]```
+  - ```[x*2 | x <- [1..10]]``` returns ```[2,4,6,8,10,12,14,16,18,20]  ```
+  - ```[x*2 | x <- [1..10], x*2 >= 12]``` returns ```[12,14,16,18,20]  ```
+  - ```[ x | x <- [50..100], x `mod` 7 == 3] ``` returns ```[52,59,66,73,80,87,94]   ```
+  - ```boomBangs xs = [ if x < 10 then "BOOM!" else "BANG!" | x <- xs, odd x]```
+      - ```boomBangs [7..13]``` returns ```["BOOM!","BOOM!","BANG!","BANG!"]```  
 
+## Tuples
+- Fundamental Differences between Lists and Tuples:
+  - 
 ### Prelude Functions and Operators
 
 
