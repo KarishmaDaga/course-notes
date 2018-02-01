@@ -454,6 +454,8 @@ challenge x n
 
 ##### Week 4 Lecture 1, January 29 2018
 
+WE HAD A TEST
+
 ##### Week 4 Lecture 2, February 1 2018
 
 ### Lazy Evaluation (Or just Clever Evaluation)
@@ -507,8 +509,8 @@ prime4 n =
 ## Tuples
 - Tuples are used when you know exactly how many values you want to combine and its type depends on how many components it has and the types of the components. They are denoted with parentheses and their components are separated by commas.
 - They don't have to be homogenous. Unlike a list, a tuple can contain a combination of several types.
-- Think about how we'd represent a two-dimensional vector in Haskell. One way would be to use a list. That would kind of work. So what if we wanted to put a couple of vectors in a list to represent points of a shape on a two-dimensional plane? We could do something like [[1,2],[8,11],[4,5]]. The problem with that method is that we could also do stuff like [[1,2],[8,11,5],[4,5]], which Haskell has no problem with since it's still a list of lists with numbers but it kind of doesn't make sense.
-- But a tuple of size two (also called a pair) is its own type, which means that a list can't have a couple of pairs in it and then a triple (a tuple of size three), so let's use that instead. Instead of surrounding the vectors with square brackets, we use parentheses: [(1,2),(8,11),(4,5)]. What if we tried to make a shape like [(1,2),(8,11,5),(4,5)]? Well, we'd get a "couldn't match expected type"
+- Think about how we'd represent a two-dimensional vector in Haskell. One way would be to use a list. That would kind of work. So what if we wanted to put a couple of vectors in a list to represent points of a shape on a two-dimensional plane? We could do something like ```[[1,2],[8,11],[4,5]]```. The problem with that method is that we could also do stuff like ```[[1,2],[8,11,5],[4,5]]```, which Haskell has no problem with since it's still a list of lists with numbers but it kind of doesn't make sense.
+- But a tuple of size two (also called a pair) is its own type, which means that a list can't have a couple of pairs in it and then a triple (a tuple of size three), so let's use that instead. Instead of surrounding the vectors with square brackets, we use parentheses: ```[(1,2),(8,11),(4,5)]```. What if we tried to make a shape like ```[(1,2),(8,11,5),(4,5)]```? Well, we'd get a "couldn't match expected type"
 - Because of this, you should use tuples when you know in advance what data you're handling and if you need more rigidity
 - Tuples can be compared if their components can be compared, but you cannot compare them if the tuples are of different size
 
@@ -532,7 +534,7 @@ names ((name, mark):moreData) = name:tailNames
 ```
 uh blanked out from 10:02 to 10:11
 
-Tuple Operations: 
+Tuple Operations:
 - Pair operations:
   - ```fst``` = gives first element of two element tuple
   - ```snd``` = gives second element of two element tuple
