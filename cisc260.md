@@ -452,18 +452,92 @@ challenge x n
   - ```boomBangs xs = [ if x < 10 then "BOOM!" else "BANG!" | x <- xs, odd x]```
       - ```boomBangs [7..13]``` returns ```["BOOM!","BOOM!","BANG!","BANG!"]```  
 
+##### Week 4 Lecture 1, January 29 2018
+
+##### Week 4 Lecture 2, February 1 2018
+
+### Lazy Evaluation (Or just Clever Evaluation)
+Recall this example from a previous lecture:
+```
+prime1 :: Int -> Bool
+prime1 n = not (hasFactor n 2)
+  where
+  -- has factor means n
+
+```
+
+New version:
+```
+prime2 :: Int -> Bool
+prime2 n =
+  null [fact | fact <- [2 .. (intRoot n)], mod n fact == 0]
+```
+Is this more or less efficient? It's actually just as efficient as the previous version.
+
+```
+-- In prelude:
+null :: [a] -> Bool
+null [] = True
+null (_:_) = False
+```
+Version 3:
+```
+prime3 :: Int -> Bool
+prime3 n =
+  [fact | fact <- [2 .. (intRoot n)], mod n fact == 0] == []
+```
+This depends on how list equality test works:
+```
+[] == [] = True
+(x:xs) == (y:ys) = x == y && xs == ys
+_ == _ = False
+False && _ = False
+True && x = x
+```
+
+Version 4:
+```
+prime4 :: Int -> Bool
+prime4 n =
+  length [fact | fact <- [2 .. (intRoot n)], mod n fact == 0] == 0
+  -- we would have to count the num of elements in the entire list. In terms of
+  -- execution, this is a lot slower
+```
+
 ## Tuples
-- Fundamental Differences between Lists and Tuples:
-  - 
-### Prelude Functions and Operators
+- Tuples are used when you know exactly how many values you want to combine and its type depends on how many components it has and the types of the components. They are denoted with parentheses and their components are separated by commas.
+- They don't have to be homogenous. Unlike a list, a tuple can contain a combination of several types.
+- Think about how we'd represent a two-dimensional vector in Haskell. One way would be to use a list. That would kind of work. So what if we wanted to put a couple of vectors in a list to represent points of a shape on a two-dimensional plane? We could do something like [[1,2],[8,11],[4,5]]. The problem with that method is that we could also do stuff like [[1,2],[8,11,5],[4,5]], which Haskell has no problem with since it's still a list of lists with numbers but it kind of doesn't make sense.
+- But a tuple of size two (also called a pair) is its own type, which means that a list can't have a couple of pairs in it and then a triple (a tuple of size three), so let's use that instead. Instead of surrounding the vectors with square brackets, we use parentheses: [(1,2),(8,11),(4,5)]. What if we tried to make a shape like [(1,2),(8,11,5),(4,5)]? Well, we'd get a "couldn't match expected type"
+- Because of this, you should use tuples when you know in advance what data you're handling and if you need more rigidity
+- Tuples can be compared if their components can be compared, but you cannot compare them if the tuples are of different size
 
+```
+type Triple = (Int, String, Float)
 
-### More Useful Functions
+f :: Triple -> Float
+-- give names to all three elements of the triple
+f (a,b,c) = a + length b + c
 
-### List Operators
+-- Common use of tuples: combining related values. Represent course information
+-- as a list of (String, Int) pairs
+type CourseData = [(String, Int)]
+testCourse :: CourseData
+testCourse = [("Peter", 97), ("Susan", 78), ("Edmund", 50), ("Lucy", 97), ("Peter", 80)]
 
-### Converting to and from Strings
+names :: CourseData -> [String]
+names [] = []
+names ((name, mark):moreData) = name:tailNames
+  where tailNames = names moreData
+```
+uh blanked out from 10:02 to 10:11
 
-### Improved Error Messages
-
-### Pattern Matching
+Tuple Operations: 
+- Pair operations:
+  - ```fst``` = gives first element of two element tuple
+  - ```snd``` = gives second element of two element tuple
+- ```zip``` = takes in two lists and returns the a list of tuple pairs of them
+  -  ```zip [1,2,3,4,5] [5,5,5,5,5]```  yields ```[(1,5),(2,5),(3,5),(4,5),(5,5)]  ```
+  - ```zip [1 .. 5] ["one", "two", "three", "four", "five"] ``` yields ```[(1,"one"),(2,"two"),(3,"three"),(4,"four"),(5,"five")]  ```
+  - The longer list simply gets cut off to match the length of the shorter one
+    - ```zip [1..] ["apple", "orange", "cherry", "mango"]``` yields ```[(1,"apple"),(2,"orange"),(3,"cherry"),(4,"mango")]  ```
