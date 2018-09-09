@@ -16,6 +16,14 @@ h1 a {
 Hi! These are my notes for various undergrad computer science and mathematics courses at [Queen's University](http://queensu.ca/).
 
 ## Courses
+
+
+### Fall 2018 
+* [Statistical Inference, STAT 463]()
+* [Data Analytics, CISC 251]()
+* [Applied Methods in Statistics, STAT 361]()
+* [Software Architecture, CISC 322]()
+
 ### Winter 2018
 * [CISC 235: Data Structures](cisc235.md)
 * [CISC 221: Computer Architecture](cisc221.md)
@@ -26,4 +34,4 @@ Hi! These are my notes for various undergrad computer science and mathematics co
 
 If these have been of help or there's a correction to be made, let me know at [karishma.daga@queensu.ca](mailto:karishma.daga@wqueensu.ca) !
 
-You can also find my sordid details at [karishmadaga.com](http://karishmadaga.com) or laugh at my [twitter](https://twitter.com/karishmadagaa).
+You can also find me at [karishmadaga.com](http://karishmadaga.com) or laugh at my [twitter](https://twitter.com/karishmadagaa).
