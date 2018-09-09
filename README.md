@@ -3,9 +3,13 @@
 I type up my handwritten lecture notes from my cs and math classes so that I don't die around 
 midterms/finals/etc, and I thought it would be a good idea to share them online! Everything is written in markdown for ease and I update these notes throughout the semester. For more theory heavy courses like rings and fields or stats, I'll just upload pictures of my handwritten notes.
 
-I'd greatly appreciate reports of any typos and factual errors you find. Open an issue if you find something that should be fixed.
-
 ## Courses
+
+### Fall 2018 
+* [Statistical Inference, STAT 463]()
+* [Data Analytics, CISC 251]()
+* [Applied Methods in Statistics, STAT 361]()
+* [Software Architecture, CISC 322]()
 
 ### Winter 2018
 * [Data Structures](http://karishmadaga.com/course-notes/cisc235.html)
