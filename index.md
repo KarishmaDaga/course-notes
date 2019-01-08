@@ -17,6 +17,8 @@ Hi! These are my notes for various undergrad computer science and mathematics co
 
 ## Courses
 
+### Winter 2019
+* [Operating Systems](cisc-342.md)
 
 ### Fall 2018 
 * [Statistical Inference, STAT 463]()
