@@ -1,9 +1,14 @@
+<style>
+h1 a {display: none;}
+.container-lg {min-width: 200px; max-width:880px; padding:45px;}
+</style>
+
 Course details:
 Office Hours: Monday, 10:30 - 12 Room 241
 TB: Operating Systems Concepts (Dinosaur Book) 
 
 
-Dfn: An *operating system* is a special layer of software that provides applicationsoftware access to hardware resources 
+Dfn: An **operating system** is a special layer of software that provides applicationsoftware access to hardware resources 
 - Convenient abstraction of complex hardware devices
 - Protected access to shared resources
 - Security and authentication
