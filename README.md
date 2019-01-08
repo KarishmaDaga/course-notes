@@ -7,7 +7,8 @@ Hi! These are my notes for various undergrad computer science and mathematics co
 ## Third Year
 
 ### Winter 2019
-* [Operating Systems]()
+* [Operating Systems](http://karishmadaga.com/course-notes/cisc-342.html)
+
 ### Fall 2018 
 * [Statistical Inference, STAT 463]()
 * [Data Analytics, CISC 251]()
