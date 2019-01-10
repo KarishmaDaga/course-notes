@@ -6,8 +6,8 @@ h1 a {display: none;}
 # CISC 342: Operating Systems
 
 ## Topics 
-- [Lecture 1](#Lecture-1)
-- [Lecture 2](#Lecture-2)
+- [Lecture 1](#lecture-1)
+- [Lecture 2](#lecture-2)
 
 ### Resources
 - [MIT, Operating System Engineering Fall 2012]()
@@ -19,7 +19,8 @@ h1 a {display: none;}
 - Office Hours: Monday, 10:30 - 12 Room 241
 - TB: Operating Systems Concepts (Dinosaur Book) 
 
-<br></br>
+
+
 
 ## Lecture 1
 Dfn: An **operating system** is a special layer of software that provides applicationsoftware access to hardware resources 
@@ -66,6 +67,7 @@ Moore's Law
 - Network OS: for network admin + mgmt
 
 _What is a process?_
+
 Dfn: A **process** is an execution stream in the context of a particular process state. A more intuitive definition is that it's just a running piece of code along with all the things that the code can affect or be affceted by.
 - Process state is everything that can affect or be affected by the process (code, data values, open files, etc)
 - Execution stream is a sequence of instruction performed in a process state
@@ -86,8 +88,8 @@ Most systems allow more than one process (multiprogramming).
 - **CPU**: digital logic for performing computation 
 - **Central Memory**: hardware components used to store data. They are often classified following their storage capacity, speed (access time), and cost:
 	- (in ascending order) mass storage
-	- main memory (dram) 
-	- cache memory (sram) 
+	- main memory (dynamic ram) 
+	- cache memory (static ram) 
 	- register
 	- Note: 
 - **I/O Devices**: communicating data to and from devices
