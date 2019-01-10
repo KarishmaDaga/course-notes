@@ -41,7 +41,7 @@ class Graph:
 				if visited[i] == False:
 					queue.append(i)
 					visited[i] = True
-
+```
 ## Exercise: Find all connected components of G in O(n+m) time.
 
 Intuition: 
