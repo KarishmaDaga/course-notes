@@ -96,3 +96,55 @@ Most systems allow more than one process (multiprogramming).
 
 #### Von Neumann Architecture
  
+
+### Jan 17th 
+
+- Dfn: A thread is a lightweight process
+- Does not need to allocate additional memory space. They only require dedicated registers and memory stack,
+- thread context switching is very fast 
+
+- Similar to processes:
+	- threads are identified by a thread identifier
+	- each thread is associated to a data structure called a TCB (thread control block)
+
+- Recall: SRAM is the internal cache in the CPU and stores the frequently requested data. 
+
+
+#### threads vs processes
+- assuming you have a process that creates another process (child process) by invoking the system called fork()
+- stack segment used for interrupts
+- the original pcb and the new pcb are created. the new pcb is pointing to the original pcb, the pc counter of the new process 
+
+
+(NOTE: assignment. when fork() is called, a new process is created for each iteration of a loop from 1 to n.)
+
+- the child process being changed doesn't change the parent process 
+
+Example: 
+
+```
+for (int i = 0, i <= 3, i++) 
+{ 
+	p = fork()
+}
+```
+p1 -> p2, p3, p4
+p2 -> p5, p6
+p3 -> p7
+p4 -> O
+p5 -> p8
+
+### Threads
+- single threaded processes
+- multithreaded processes = can perform more than one taks at a time
+- asynchronous and synchronous threading
+- a thread is pointing to a certain data/code segment ????
+- full vs partial context switching 
+
+#### Thread levels
+- Often implemented in two levels
+- User level threads: OS doesn't know you've created multiple threads in a process
+	- 
+
+#### Direct Memory Access
+
