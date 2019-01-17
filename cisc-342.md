@@ -8,6 +8,7 @@ h1 a {display: none;}
 ## Topics 
 - [Lecture 1](#lecture-1)
 - [Lecture 2](#lecture-2)
+- [Assignment 1 Notes](#cisc-324-assignment-1.md)
 
 ### Resources
 - [MIT, Operating System Engineering Fall 2012]()
@@ -18,7 +19,7 @@ h1 a {display: none;}
 ### Administrative Details
 - Office Hours: Monday, 10:30 - 12 Room 241
 - TB: Operating Systems Concepts (Dinosaur Book) 
-
+- 6 assignments, 6 labs, 2 midterms, 1 final. 
 
 
 
