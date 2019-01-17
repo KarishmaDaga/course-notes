@@ -8,7 +8,7 @@ h1 a {display: none;}
 ## Topics 
 - [Lecture 1](#lecture-1)
 - [Lecture 2](#lecture-2)
-- [Assignment 1 Notes](#cisc-324-assignment-1.md)
+- [Assignment 1 Notes](cisc-324-assignment-1.md)
 
 ### Resources
 - [MIT, Operating System Engineering Fall 2012]()
