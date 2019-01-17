@@ -1,8 +1,7 @@
 <style> h1 a {display:none;} .container-lg {min-width:200px; max-width:880px; padding:45px}
 </style>
 
-[CISC 324 Notes](cisc-342.md)
-[All Notes](http://karishmadaga.com/course-notes) // [About](http://karishmadaga.com)
+[CISC 324 Notes](cisc-342.md) // [All Notes](http://karishmadaga.com/course-notes) // [About](http://karishmadaga.com)
 
 
 # Notes for Assignment 1 
@@ -30,7 +29,7 @@
 - address space: programs execute in an address space that is distinct from the memory space of the physical machine
 	- the set of accessible addresses and state associated with them
 	- Ex: for a 32 bit processor there at 2^32 = 4 billion addresses
-	- | stack | ... | heap | static data | code (i.e. instructions |
+	- stack | ... | heap | static data | code (i.e. instructions
 - process: an instance of the executing program is a *process* consisting of an adress space and one or more threads of control
 - dual mode operation/protection: only the system has thr ability to access certain resources 
 	- the os and the hardware are protected from user programs and user programs are isolated from one another by controlling the translation from program virtual addresses to machine physical addresses
