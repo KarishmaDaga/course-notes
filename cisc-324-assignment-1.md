@@ -1,6 +1,13 @@
+<style> h1 a {display:none;} .container-lg {min-width:200px; max-width:880px; padding:45px}
+</style>
+
+[CISC 324 Notes](cisc-342.md)
+[All Notes](http://karishmadaga.com/course-notes) // [About](http://karishmadaga.com)
+
+
 # Notes for Assignment 1 
 
-### Terms
+### General Terms
 
 - address bus:
 - data bus:
