@@ -8,8 +8,8 @@
 
 ### General Terms
 
--**address bus**: determines the location in memory that the processor will read data from or write data to
--**data bus**: this contains the contents that have been read from the memory location or are to be written into the memory location
+- **address bus**: determines the location in memory that the processor will read data from or write data to
+- **data bus**: this contains the contents that have been read from the memory location or are to be written into the memory location
 - **control bus**: manages the information flow between the components indicating whether the operation is a read or write and ensuring that the operation happens at the right time
 - **memory data register**: the cpu register that stores the data being transferred to and from the immediate access storage (i.e. the data value being fetched or stored). It contains the copy of designated memory locations specified by the memmory address register. 
 - **memory address register**: the cpu register that either stores the memory address from which the data will be fetched from the cpu or the address to which the data will be sent and stored (i.e. it holds the memory location of data that needs to be accessed)
