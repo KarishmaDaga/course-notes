@@ -149,3 +149,75 @@ p5 -> p8
 
 #### Direct Memory Access
 
+
+### Jan 22 2019
+- data races vs race conditions
+	- data race: occurs when 2 instructions from different threads access the same memory location, at least one of these accesses is a write and there is o synchronization that is mandating any particular order among these accesses
+	- a race condition is a *semantic error*. It is a flaw that occurs in the timing or the ordering of events hat leads to erroneous program behaviour. Many race conditions can be cased by data races, but that's not necessary.
+- critical section: program requests to use shared resources on which the access is mutually exclusive
+	- typically organized as 
+	```
+	program()
+	{ 
+		[remainder section]
+		entry section
+			critical section
+		exit section
+		[remainder section]
+	}
+	```
+	- in the entry section, the process places a request to the OS to grant it  access to the critical section 
+	- in the exit section, the process informs the OS of leaving the critical section to wake up any waiting processes
+
+##### Example
+Let thread 1 and thread 2 be two java threads:
+the second line, i = i + 15 and i = i - 15, and v = i / 10 are the critical sections (manipulating variable where more than one thread is currently sharing)
+
+- the **critical section problem** is all about designing a protocol that processes can apply to cooperate. Such protocol must satisfy the following three requirements: 
+	- mutual exclusion: at most, one process is executing its critical section at a time
+	- progress: a process must leave the crit section once its done with it and *notify other processes about that*
+	- bounded waiting: the process waiting in the queue for the critical section must not wait indefinitely 
+- Note:
+	- a process may be interrupted (context switch) during its critical section
+	- there is a queue of PCBs (process control blocks)
+
+#### Synchronization Mechanisms
+
+##### Mutex Locks
+Dfn: A mutex lock stands for **mut**ual **ex**clusion, the simplest software based solution for the critical section problem
+
+- a process must acquire the lock before entering its crit section
+- two **atomic primitives** are used, the `acquire()` primitive (entry section) and the `release()` primitive (exit section)
+- uses a boolean variable `available` to determine whether the lock is available or not
+
+```
+acquire() 
+{ 
+	while(!available);
+	available = false;
+}
+
+release()
+{
+	available = true;
+}
+
+program() 
+{
+	acquire();
+	Critical Section;
+	release();
+}
+```
+- the use of mutex creates **busy waiting** (continuous looping)
+- each process acquiring a non available lock spins while waiting 
+- no context switch is required when a process must wait on a lock
+- used in multiprocessor systems where one process can "spin" on one CPU while another performs its critical section on another CPU
+- the primitives are sometimes called `acquire()` -> `lock()` and `release()` -> `unlock()`.
+
+##### Example for Mutex Locks
+What is the final value of a shared variable if we use `lock()` and `unlock()`?
+
+#### Semaphores 
+Dfn: A semaphore allows two ore more processes or threads to communicate in order to be executed in a correct order
+
