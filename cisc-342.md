@@ -221,3 +221,50 @@ What is the final value of a shared variable if we use `lock()` and `unlock()`?
 #### Semaphores 
 Dfn: A semaphore allows two ore more processes or threads to communicate in order to be executed in a correct order
 
+## Feb 5th - Deadlocks Avoidance
+
+If a process requests a resource that is **currently available**, it may still have to wait.
+
+### Banker's Algorithm
+An algorithm that allows the avoidance of deadlocks by determining whether a safe sequence S exists or not
+
+- The algorithm uses four data structures
+	- **available**: a vector of size *m* (resource types) to express the currently available number of instances for a given resource Rj
+		- there are *k* instances of resource type Rj, [Available[j] = k]
+	- **max**: a matrix of size nxm to express the max number of resources to be requested by a given process
+		- [Max[i,j] = k]: at most k instances of resource type Rj will be requested by process Pi
+	- **Need[i,j] = Max[i,j] - Allocation[i,j]**
+
+### Resource Request Algorithm
+Let request i be the request vector for process Pi:
+
+- if request i <= Need i, goto 2 else error
+- if request i <= available, goto 3, else Pi must wait
+- the system pretends to have allocated resources to Pi by updating the data structure
+
+### Banker's Algorithm
+- Let work and finish be vectors of len m and n respectively s.t. work = available and for all i, finish[i] = false
+- find an index i:
+	- finish[i] == false
+	- need i <= work
+	- else goto 4
+- work = work + allocation i
+	- finish[i] = true
+	- goto 2
+- if for all i: finish[1] == true then the system is in a safe state
+
+- Example: a system needs O(m x n^2) operations to execute the banker's alg where n is the # of processess and m is the # of resources
+
+### Example
+R1 | R2 | R3
+3 | 3 | 2
+2 | 0 | 0
+**5** | **3** | **2**
+2 | 1 | 1
+7 | 4 | 3
+
+- when a request is made and it *does not exceed the currently available resources* pretend it has been granted and then see if the resulting state is a safe one.
+	- if so, grant the request
+	- if not, deny the request
+
+
